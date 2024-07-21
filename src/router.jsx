@@ -21,6 +21,6 @@ const router = createBrowserRouter([
     path: '/feedback/:subjectId/:rightAnswers/:total',
     element: <Feedback />
   }
-]);
+], { basename: '/uninter-questions' });
 
 export default router;
