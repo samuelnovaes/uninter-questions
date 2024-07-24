@@ -24,7 +24,7 @@ await page.goto(homePage);
 await page.waitForSelector('a#logout', { timeout: 0 });
 
 page.waitForSelector('#login-form', { timeout: 0 }).then(async () => {
-  await fs.writeFile(repositoryPath, JSON.stringify(subjects));
+  await fs.writeFile(repositoryPath, JSON.stringify(subjects, null, 2));
   process.exit();
 });
 
