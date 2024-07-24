@@ -25,6 +25,11 @@ const SearchField = ({ onChange }) => {
     onChange(value);
   }, [value]);
 
+  const dialogSubmitHandler = (event) => {
+    event.preventDefault();
+    setOpenDialog(false);
+  };
+
   return (
     <>
       <DesktopSearch>
@@ -48,11 +53,13 @@ const SearchField = ({ onChange }) => {
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
         <Card>
           <CardContent>
-            <Input
-              placeholder='Buscar...'
-              onChange={(event) => setValue(event.target.value)}
-              value={value}
-            />
+            <form onSubmit={dialogSubmitHandler}>
+              <Input
+                placeholder='Buscar...'
+                onChange={(event) => setValue(event.target.value)}
+                value={value}
+              />
+            </form>
           </CardContent>
         </Card>
       </Dialog>
