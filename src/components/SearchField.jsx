@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Search } from '@mui/icons-material';
-import { Card, CardContent, Dialog, IconButton, Input, InputAdornment } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, IconButton, Input, InputAdornment } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 const MobileSearch = styled.div`
@@ -25,11 +25,6 @@ const SearchField = ({ onChange }) => {
     onChange(value);
   }, [value]);
 
-  const dialogSubmitHandler = (event) => {
-    event.preventDefault();
-    setOpenDialog(false);
-  };
-
   return (
     <>
       <DesktopSearch>
@@ -51,17 +46,16 @@ const SearchField = ({ onChange }) => {
         </IconButton>
       </MobileSearch>
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
-        <Card>
-          <CardContent>
-            <form onSubmit={dialogSubmitHandler}>
-              <Input
-                placeholder='Buscar...'
-                onChange={(event) => setValue(event.target.value)}
-                value={value}
-              />
-            </form>
-          </CardContent>
-        </Card>
+        <DialogContent>
+          <Input
+            placeholder='Buscar...'
+            onChange={(event) => setValue(event.target.value)}
+            value={value}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpenDialog(false)}>Fechar</Button>
+        </DialogActions>
       </Dialog>
     </>
   );
