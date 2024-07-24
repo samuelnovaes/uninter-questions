@@ -5,7 +5,7 @@ const QuestionsContainer = ({ children }) => (
     sx={{
       display: 'flex',
       flexDirection: 'column',
-      gap: 4
+      gap: 2
     }}
   >
     {children}

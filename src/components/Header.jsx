@@ -1,6 +1,20 @@
+import styled from '@emotion/styled';
 import { ArrowBack } from '@mui/icons-material';
-import { AppBar, Container, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Container, IconButton, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
+
+const Title = styled.div`
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 20px;
+  margin: ${(props) => props.hasMargin ? '0 16px' : '0'};
+  @media (width <= 728px) {
+    font-size: 16px;
+  }
+`;
 
 const Header = ({ title, backButton, extend }) => (
   <AppBar position='sticky'>
@@ -15,23 +29,12 @@ const Header = ({ title, backButton, extend }) => (
       }}>
         {backButton && (
           <Link to={backButton}>
-            <IconButton sx={{ mr: 2 }}>
+            <IconButton>
               <ArrowBack />
             </IconButton>
           </Link>
         )}
-        <Typography
-          variant='h6'
-          component='div'
-          fontWeight='bold'
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            flex: 1
-          }}
-        >
-          {title}
-        </Typography>
+        <Title hasMargin={!!backButton}>{title}</Title>
         {extend}
       </Container>
     </Toolbar>

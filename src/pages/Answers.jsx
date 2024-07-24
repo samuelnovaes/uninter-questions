@@ -26,7 +26,7 @@ const Answers = () => {
       <Header
         title={`Gabarito - ${subject.subject}`}
         backButton='/'
-        extend={<SearchField onChage={onSearch} />}
+        extend={<SearchField onChange={onSearch} />}
       />
       <Container sx={{ py: 4 }}>
         <QuestionsContainer>
