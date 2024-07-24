@@ -410,6 +410,312 @@
             "rightAnswer": false
           }
         ]
+      },
+      {
+        "id": "82b4ffbb-e49e-4c7f-8915-96520818bf1d",
+        "description": [
+          "<p style=\"text-align: justify;\">A Constituição Federal (CF/88) estabelece, entre os direitos e garantias fundamentais de qualquer cidadão previstos em seu art. 5º, o direito à privacidade. Sobre o direito à privacidade, assinale a alternativa correta.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">O direito à privacidade é absoluto ainda que o empregador tenha o direito de organizar, regular e disciplinar as atividades do empregado.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">As ferramentas de comunicação via internet poderão ser utilizadas com expectativa de privacidade e intimidade em casos de teletrabalho, por ser essa questão inerente direito à privacidade, considerando a boa-fé do operador que deve prevalecer nas relações de trabalho.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">O tratamento de dados pessoais dos trabalhadores deve ser realizado em forma justa, legal e ilimitada no que compete às questões diretamente relevantes para a relação de trabalho do trabalhador.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">Recomenda-se que as empresas gerenciem atentamente os acessos concedidos a usuários, evitando atribuir acessos e permissões desnecessários, que possam viabilizar a obtenção de informações ou recursos informáticos desvinculados ou desnecessários para a atuação profissional do trabalhador.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Todas as alternativas estão corretas.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "d28236ba-ca08-42fa-9689-d21e9a8673b8",
+        "description": [
+          "<p style=\"text-align: justify;\">No que compete o CDC e a LGPD, analise as alternativas e assinale a que está <strong><u>incorreta</u></strong>.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">Uma vez caracterizada a existência de qualquer relação de consumo entre um fornecedor e um consumidor, independentemente do meio utilizado como canal de venda, se físico/presencial ou virtual/internet, aplicam-se a ela as normas do CDC, além das demais codificações e diplomas legais pertinentes.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">A proteção à privacidade do usuário de serviços digitais no ambiente virtual surge como dever acessório que deve ser observado rigorosamente pelo fornecedor, exceto se o consumidor, deforma livre, esclarecida e consciente, dê expressamente seu consentimento para que seus dados sejam acessados e explorados comercialmente.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">A LGPD estabelece como fundamento da proteção aos dados pessoais o respeito à privacidade e o direito à livre autodeterminação informativa, que Cinthia Obladen de Almendra Freitas define como um direito de personalidade que assegura ao cidadão a propriedade sobre seus dados pessoais, bem como o controle de sua emissão e utilização.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">O CDC assegura o direito básico do consumidor à garantia de qualidade e adequação dos produtos e serviços, devendo ser garantido o atendimento de suas legítimas expectativas, e restringe a inserção no mercado de consumo produto ou serviço apto a causar risco à saúde ou à sua segurança (CDC, arts. 8º e 10), ratificando o disposto nos arts. 4º e 6º.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Deverá ser disponibilizado um termo de uso claro, transparente, que permita ao consumidor compreender de forma subjetiva, utilizando poucas expressões técnicas que dificultem a compreensão de seu significado e alcance, em virtude da renúncia, ainda que parcial, do direito à privacidade.</p>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "a5ce95f7-b55a-4b15-b484-6f8a24a84a65",
+        "description": [
+          "<p style=\"text-align: justify;\">Paralelo às facilidades propiciadas pelas TICs, surgiram novas maneiras de criminalidade, amparadas pela nova realidade das relações virtuais, no âmbito da internet. Sobre essa temática é possível afirmar que:</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">A TIC aproxima as pessoas, reduz barreiras e promove facilidades para o dia a dia, ela também promove reflexos sociais positivos uma vez que auxilia no combate à criminalidade, favorecendo a segurança do cidadão.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">As empresas que adotam maciçamente práticas comerciais envolvendo pagamentos, contratos e comércio eletrônicos, têm sido vítimas de quadrilhas especializadas em roubo de informações de clientes (senhas, cartões de crédito e dados pessoais) e clonagem de páginas (<em>phishing</em>, que induz clientes e consumidores ao erro recebendo pagamentos em nome da empresa clonada), furto de bases de dados de clientes, fornecedores e colaboradores e sequestro de dados via criptografia (<em>ransomware</em>), por meio, inclusive, do uso de técnicas de engenharia social.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">Quadrilhas estão se especializando em crimes que envolvem o uso de carteiras digitais, inclusive com a presença da vítima, como é o caso de sequestros-relâmpagos para coagir a vítima a realizar pagamentos via TED.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">Diante desses novos fatos sociais e do aprimoramento dos meios utilizados pela criminalidade, a sociedade precisa da adequada proteção do direito civil, que, por sua vez, necessita ser repensado e atualizado para atender adequadamente à sociedade, por meio da proteção do cidadão, evitando que seus bens jurídicos mais relevantes, quais sejam, sua vida, sua liberdade, sua dignidade, sua privacidade e seu patrimônio, sejam lesados.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">O Código Penal brasileiro é fruto do Decreto-Lei n. 2.848/1940 (Brasil, 1940). Sua redação tem sido, desde então, atualizada e aperfeiçoada. O texto-base traduz uma época atual e consegue atender as necessidades da sociedade sem dispor de lacunas e contratempos.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "a956f8f2-0541-407e-babc-79ba8b4bd1f7",
+        "description": [
+          "<p style=\"text-align: justify;\">Assinale a alternativa que corresponda às afirmações corretas.</p>\n<p style=\"text-align: justify;\">I. É preciso um tipo penal específico para desestimular a prática da conduta popularmente chamada de <em>sequestro de dados</em>, modalidade de ataque cibernético que, mesmo com as inovações trazidas pela Lei n. 14.155/2021, não está perfeitamente caracterizada na legislação penal brasileira.</p>\n<p style=\"text-align: justify;\">II. O autor do crime tem como recurso um vírus (<em>ransomware</em>) para administrar o ataque cibernético. Esse vírus é capaz de se esconder em arquivos e programas de computador que, quando executado, criptografa os sistemas e informações armazenadas no dispositivo, tornando-os inacessíveis aos seus legítimos usuários.</p>\n<p style=\"text-align: justify;\">III. Geralmente, por meio de <em>e-mails</em> de <em>spam</em> ocorre a disseminação do vírus <em>ransomware</em> e também por meio de golpes de engenharia social ou pela exploração de vulnerabilidades em sistemas. Para tanto, é necessário que ocorra a invasão do dispositivo informático objeto de ataque.</p>\n<p style=\"text-align: justify;\">IV. O art. 154-A, parágrafo 3º, do Código Penal, qualifica o crime quando da invasão resultar a obtenção de dados pessoais, invadindo a esfera da privacidade e segurança da vítima.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">V, F, F, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">F, V, F, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">V, V, F, F</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">F, F, V, V</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">F, V, V, F</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "3f0e598f-c5c5-4070-ac6e-f81b8cdc9974",
+        "description": [
+          "<p style=\"text-align: justify;\">Sobre o que foi estudado em sala de aula, identifique quais são as afirmações corretas.</p>\n<p style=\"text-align: justify;\">I. Os parâmetros da contratação via internet estão previstos tanto no Código Civil quanto no CDC. Destacam-se os requisitos para a validade de um contrato e a importância da boa-fé em todas as fases negociais, não se utilizando cláusulas ambíguas ou contraditórias e agindo ambas as partes sempre com lealdade e transparência.</p>\n<p style=\"text-align: justify;\">II. A responsabilidade pelos vícios deve ser atribuída ao fornecedor de produtos ou serviços.</p>\n<p style=\"text-align: justify;\">III. É obrigação do fornecedor expor informações verdadeiras, claras e pontuais sobre as características superficiais de produtos e serviços, além de mencionar os riscos que eles possam apresentar à saúde e segurança dos consumidores.</p>\n<p style=\"text-align: justify;\">IV. A regra no ordenamento jurídico é a de vinculação do fornecedor à oferta que anuncia, por isso a proposta deve conter todos os elementos essenciais do negócio proposto, como preço, quantidade, tempo de entrega, forma de pagamento, entre outras informações necessárias.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">I e II apenas.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">I e IV apenas.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">I, III e IV.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">III e IV apenas.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">I, II e IV.</p>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "28fafdb1-23e8-4505-9317-197d75137765",
+        "description": [
+          "<p style=\"text-align: justify;\">A Lei nº 12.965, de 23 de abril de 2014, conhecida como Marco Civil da internet, prevê alguns deveres dos provedores, tais como:</p>\n<p style=\"text-align: justify;\">I. Os provedores devem prestar informações que permitam a verificação quanto ao cumprimento da legislação brasileira referente à coleta, à guarda, ao armazenamento ou ao tratamento de dados, bem como quanto ao respeito à privacidade e ao sigilo de comunicações, nos termos da Lei Geral de Proteção de Dados.</p>\n<p style=\"text-align: justify;\">II. A Lei do Marco Civil da Internet prevê penalidades, como advertência, multa de 50% do faturamento do grupo econômico no Brasil no seu último exercício, suspensão temporária até a proibição de exercício de atividades para descumprimentos relativos à proteção dos registros e dados pessoais e do conteúdo de comunicações privadas.</p>\n<p style=\"text-align: justify;\">III. Os provedores de acesso à internet são obrigados a manter os registros de conexão, sob sigilo, em ambiente controlado e de segurança, pelo prazo de 12 meses, não podendo transferir tal responsabilidade para terceiros.</p>\n<p style=\"text-align: justify;\">IV. O provedor de aplicações de internet são obrigados a manter os respectivos registros de acesso a aplicações de internet, sob sigilo, em ambiente controlado e de segurança, pelo prazo de 6 meses.</p>\n<p style=\"text-align: justify;\">Assinale a alternativa que aponta todas as afirmações corretas:</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">Todas as alternativas estão corretas.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">I, II e IV</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">I e III</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">I, III e IV</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">III e IV</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "e90a30c9-c170-49b2-b1e1-73a1230844ed",
+        "description": [
+          "<p style=\"text-align: justify;\">Analise as alternativas e conclua se são verdadeiras ou falsas.</p>\n<p style=\"text-align: justify;\">(&nbsp; &nbsp;) O consumidor está muito mais exposto no consumo virtual em relação ao tradicional devido às facilidades encontradas na internet para que pessoas ajam de má-fé e adotem práticas ilícitas ou abusivas, como publicidade enganosa ou descumprimento contratual, quando da concretização de negócios.</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp; &nbsp;&nbsp;) O CDC estabelece normas principiológicas de proteção e defesa do consumidor. Para tanto, há que se analisar preliminarmente se uma contratação possui natureza cível ou consumerista, pois, a depender dessa classificação, serão aplicados os dispositivos legais ou que regem as relações civis ou as que regem as relações de consumo.</p>\n<p style=\"text-align: justify;\">(&nbsp; &nbsp;)A tecnologia está inserida na rotina das pessoas que buscam usufruir das conveniências promovidas pela internet, pela comunicação instantânea e por produtos e serviços digitais que prometem facilitar a vida. Tais produtos e serviços criam e coletam dados e informações relacionadas aos seus usuários, situação que pode, em tese, colocar em risco o direito à privacidade e a segurança dos cidadãos.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">V, F, V</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">V, V, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">V, V, V</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">F, F, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">F, F, V</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "4c0cb857-8e31-496e-8761-ae83f1fdde20",
+        "description": [
+          "<p style=\"text-align: justify;\">Compete ao profissional de TI disponibilizar ferramentas no ambiente virtual sob sua responsabilidade, certificando-se de que estas funcionem adequadamente e que as denúncias apresentadas sejam rápidas e rigorosamente apuradas e respondidas, analisando-as a partir dos critérios, regras e princípios estabelecidos na legislação vigente. Após essa afirmação, analise as seguintes disposições sobre crimes virtuais e digitais, e assinale a alternativa em que todas as afirmativas estão corretas.</p>\n<p style=\"text-align: justify;\">I. Os crimes digitais envolvem as condutas criminosas cometidas com o uso das tecnologias de informação e comunicação e aquelas nos quais o objeto da ação criminosa é o próprio sistema informático.</p>\n<p style=\"text-align: justify;\">II. É obrigação da empresa proibir e prevenir comportamentos abusivos no ambiente virtual, estabelecendo no termo de uso um código de conduta que desestimule tais práticas e que puna com rigor usuários que ajam descumprindo-o.</p>\n<p style=\"text-align: justify;\">III. O dever contratual ocorre entre o consumidor e os parceiros comerciais do fornecedor. Por isso, o fornecedor é responsável pela atuação de seus parceiros comerciais, sendo solidário na solução de qualquer problema relacionado à atuação destes, nos termos do Código de Defesa do Consumidor.</p>\n<p style=\"text-align: justify;\">IV. Em razão do Princípio da Tipicidade Penal, enquanto não for aprovada a lei de crimes digitais, ninguém pode ser condenado por prática de atividades ilícitas através da Internet.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">I e III</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">I, II e IV</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">II e III</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">I e II</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Todas as alternativas estão corretas.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "7e254507-8669-4af2-8a6e-e07854222ce5",
+        "description": [
+          "<p style=\"text-align: justify;\">Para lidar com a crescente criminalidade digital, a legislação penal precisa se manter em constante atualização, criando tipos penais que contemplem as novas modalidades de delitos informáticos.</p>\n<p style=\"text-align: justify;\">Sobre as atuais Leis que combatem os crimes da sociedade atual, assinale a alternativa <strong><u>incorreta</u></strong>.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">O Projeto de Lei n. 879/2022, de iniciativa Senador Carlos Viana (PL/MG), pretende alterar o Decreto-Lei n. 2.848, de 7 de dezembro de 1940 (Código Penal brasileiro), para qualificar o crime de invasão de dispositivo informático quando houver a obtenção de dados pessoais, e criar o crime de sequestro de dados informáticos.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">A Lei n. 12.737/2012, apelidada de <em>Lei Carolina Dieckmann</em>, atualizou o Código Penal estabeleceu como crimes os seguintes delitos informáticos dispostos nos artigos 154-A, 266 e 298.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">Com o surgimento de novas TICs, surgem novas práticas criminosas que precisam ser identificadas e adequadamente evitadas por meio de medidas de conformidade e prevenção, com a adoção de capacitação dos usuários para perceberem e prevenirem situações de risco e perigos informáticos, e por meio de medidas para combater novas formas de criminalidade, inclusive por meio da criação de novos tipos penais para desestimular e combater as novas formas de crimes virtuais.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">O projeto de lei n. 999/2022 propõe a alteração do parágrafo 3º do art. 154-A do Código Penal, acrescentando a expressão “obtenção de dados pessoais” no contexto da invasão de dispositivo informático, e a criação do art. 154-C, tipificando como crime a conduta descrita como “sequestro de dados informáticos”, inclusive tornando o crime mais grave quando for praticado em face de autoridade pública, conforme o seguinte texto inicial do projeto, a seguir descrito.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">O combate a crimes cibernéticos é um compromisso do Estado Brasileiro, que aderiu à Convenção sobre o Crime Cibernético (também conhecida por Convenção de Budapeste),firmada no âmbito do Conselho da Europa para promover a cooperação entre os países no combate aos crimes praticados pela internet e com o uso de computadores, por meio do Decreto Legislativo n. 37, de 16 de dezembro de 2021.</p>",
+            "rightAnswer": false
+          }
+        ]
       }
     ]
   },
@@ -993,6 +1299,673 @@
           {
             "name": "D",
             "description": "CONSELHOS",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "416209d4-f230-4e19-9cdc-512ebe58e6a2",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">A base binária é um sistema posicional de numeração que conta com dois símbolos, 0 e 1. </span> <span style=\"font-weight: 400;\">É o sistema utilizado nos computadores que trabalham com dois níveis de tensão distintos, um representado por 0 e outro representado por 1. Na computação um dígito binário (0 ou 1) é chamado de bit e o conjunto formado por 8 bits é chamado de byte. Escreva o byte associado ao decimal 5 e o byte associado ao decimal 11.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span style=\"font-weight: 400;\">00000101 e&nbsp;</span><span style=\"font-weight: 400;\">00001111</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span style=\"font-weight: 400;\">00010101 e&nbsp;</span><span style=\"font-weight: 400;\">00001011</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p><span style=\"font-weight: 400;\">00000101 e&nbsp;</span><span style=\"font-weight: 400;\">00001011</span></p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<span style=\"font-weight: 400;\">00000111 e&nbsp;</span><span style=\"font-weight: 400;\">00010011</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "5079a48d-9c08-4286-a396-3b9104eee1fc",
+        "description": [
+          "<span style=\"font-weight: 400;\">Dadas as proposições simples “p”, “q” e “r” onde V(p)=F, V(q)=F e V(r)=V, os valores lógicos das proposições compostas “~p+r” e “p+q” são, respectivamente,</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "V e V",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "V e F",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "F e V",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "F e F",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "a0b69f73-f7d8-4d0f-a2a7-e8c32bcf9763",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Durante um determinado dia, uma pessoa realizou de hora em hora medições da velocidade de download de sua internet por meio de um aplicativo e obteve os seguintes resultados em megabits por segundo (Mbps):</span></p>\n<p><span style=\"font-weight: 400;\">67,8; 78,6; 54,4; 98,6; 99,4; 130,8; 142,6; 161,6; 142,5; 158,4</span></p>\n<p><span style=\"font-weight: 400;\">Neste período, qual foi a mediana?</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "110,12",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "115,10",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "116,6",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "117,3",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "ad3dff9c-8f9a-4382-9763-ace3336f02d2",
+        "description": [
+          "<span style=\"font-weight: 400;\">A notação científica normalizada foi criada para garantir a unicidade da representação de números em notação científica. Na notação científica normalizada, o número representado possui apenas um dígito antes do separador de casas decimais. O Python pode ser utilizado para obtermos a representação de um número por meio desta notação. Por meio do Python, escreva a representação do número 22658001 utilizando a notação científica normalizada com 8 casas decimais.</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>2.26580010e+06</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>2.26580010e+07</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<span>2.26580010e+08</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>2.26580010e+09</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "3fe79df6-b95d-4f23-af1b-748958a6d224",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Durante um determinado dia, uma pessoa realizou de hora em hora medições da velocidade de download de sua internet por meio de um aplicativo e obteve os seguintes resultados em megabits por segundo (Mbps):</span></p>\n<p><span style=\"font-weight: 400;\">67,8; 78,6; 54,4; 98,6; 99,4; 130,8; 142,6; 161,6; 142,5; 158,4</span></p>\n<p><span style=\"font-weight: 400;\">Neste período, qual foi a velocidade média de download, em Mbps?</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "110,12",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "113,48",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "115,09",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "127,12",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "9e0e51b8-7e0b-41c0-89dd-5efbaf94f265",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Dados os vetores</span></p>\n<p><span style=\"font-weight: 400;\">u=(3, 6, -1)</span></p>\n<p><span style=\"font-weight: 400;\">e</span></p>\n<p><span style=\"font-weight: 400;\">v=(11, 14, 9)</span></p>\n<p><span style=\"font-weight: 400;\">obtenha por meio do Python o vetor w=u+v.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>[[10&nbsp;12&nbsp;20]]</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>[[14 20&nbsp; 8]]</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<span>[[16 22 &nbsp;6]]</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>[[14 23 11]]</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "2af3b319-b905-4a66-90d1-f2a09e3e9a6d",
+        "description": [
+          "<span style=\"font-weight: 400;\">Considere os números a=7,0102x10</span><sup><span style=\"font-weight: 400;\">5</span></sup><span style=\"font-weight: 400;\"> e b=2,1233x10</span><sup><span style=\"font-weight: 400;\">3</span></sup><span style=\"font-weight: 400;\"> na notação científica normalizada. Por meio do Python, calcule a*b apresentando o resultado com 10 casas decimais.</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>1.4884757660e+10</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>1.4884757660e+09</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<span>1.4884757660e+08</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>1.4884757660e+07</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "439cf1f4-5730-4fb9-8b82-714fe7f31462",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Durante um determinado dia, uma pessoa realizou de hora em hora medições da velocidade de download de sua internet por meio de um aplicativo e obteve os seguintes resultados em megabits por segundo (Mbps):</span></p>\n<p><span style=\"font-weight: 400;\">67,8; 78,6; 54,4; 98,6; 99,4; 130,8; 142,6; 161,6; 142,5; 158,4</span></p>\n<p><span style=\"font-weight: 400;\">Neste período, qual foi o desvio padrão?</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "38,79",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "38,43",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "39,90",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "40,04",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "f4339802-31e8-4db0-b8f2-80cfdb990515",
+        "description": [
+          "<span style=\"font-weight: 400;\">Dadas as proposições simples “p”, “q” e “r” onde V(p)=F, V(q)=F e V(r)=V, os valores lógicos das proposições compostas “~p.r”, “p.q”, “p.r”, “q.~r” são, respectivamente,</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "V, F, V, F",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "V, V, F, F",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "F, F, V, V",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span style=\"font-weight: 400;\">V, F, F, F</span>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "40411030-7600-4826-9468-7a74e3865758",
+        "description": [
+          "<span style=\"font-weight: 400;\">O erro absoluto é o módulo da diferença entre o valor exato e o valor aproximado:<br><img data-questaoobjeto=\"216754\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9jO2s6oFbVOzH11rl/1lOhZitntVJEJyQAEzXofNLFSMXPTjiWKaFVXzLkKrU21WCtaYVmUwQskruOBevGY8mSKr1Xx2fJl7sm7YcsT2Q+bLF+jrmkRePFOmqifVf/sV+A==\"><br>onde x é o valor exato e <span style=\"font-weight: 400;\">x barra</span><span style=\"font-weight: 400;\"> é o valor aproximado e o erro relativo é a divisão do módulo da diferença entre o valor exato e o valor aproximado pelo módulo do valor exato:</span><br><img data-questaoobjeto=\"216755\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9odWwYYs6Vd/HmFhk+aOxGDP9xEjiAc/HCnMsBdSQ/9u1nHtnxaT2trvnRDqg4OXQzwOENp0WVzYMylQ51XJydARgHT2O47shzyY5QACiAcRbiC/IH8Ix6FsZlUHybd/BQ==\"><br>Considerando um problema onde o valor exato de uma variável corresponde a 0,5672 e o valor aproximado é 0,55. Qual é o erro relativo?<br></span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>0.00032440056417488</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>0.01032440056417488</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span>0.02032440056417488</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>0.03032440056417488</span>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "5d8ebf3e-0f15-4062-810d-5a10c5206165",
+        "description": [
+          "<span style=\"font-weight: 400;\">Por meio do Python, converta o decimal 12323 na respectiva forma hexadecimal.</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "2992",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "3003",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "3023",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "3034",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "d10beeab-d148-4c53-951e-fd6958a181e8",
+        "description": [
+          "<span style=\"font-weight: 400;\">Dadas as proposições simples “p”, “q” e “r” onde V(p)=F, V(q)=F e V(r)=V, os valores lógicos das proposições compostas “~p+r” e “q+~r” são, respectivamente,</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "V e V",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "V e F",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "F e V",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "F e F",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "af155841-ee59-4bbf-927c-cefe308e01ed",
+        "description": [
+          "O erro absoluto é o módulo da diferença entre o valor exato e o valor aproximado:<br><img data-questaoobjeto=\"216752\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9oV+ltVmchaNrD/FtYv8eQDuUqg20DH70xIDlqcyuMuKnTPx+yrCOaR9eYr88++X7aSF3Dn9VrSJNy/FaRaC/Lb5qHgcJ7mfdA0UrUvGG5i52ARys9aMiFfGNEonGGWYTw==\"><br>onde x é o valor exato e <span>x barra</span><span> é o valor aproximado e o erro relativo é a divisão do módulo da diferença entre o valor exato e o valor aproximado pelo módulo do valor exato:</span><br><img data-questaoobjeto=\"216753\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9roeJdxbIYvET7+KdMAEi2S1v70R4ovCGm56Wb/2QUSGi+ofX8JVhDX9Yw4WbwvstBUTbnWeuBt2tcHgUSoFpcUPLvQr0p2CwN5H9XI92+A1Qd3YsTu582DsDcjJqeomDw==\"><br>Considerando um problema onde o valor exato de uma variável corresponde a 0,5672 e o valor aproximado é 0,55. Qual é o erro absoluto?<div class=\"row\"></div>",
+          "<span style=\"font-weight: 400;\">&nbsp;</span>"
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>0.010199999999999993</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>0.014499999999999993</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span>0.017199999999999993</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<span>0.020299999999999993</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "bfa742ac-04e9-4ec7-a098-b883b84c7466",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Uma função da forma</span></p>\n<p><span style=\"font-weight: 400;\">y=ax</span><sup><span style=\"font-weight: 400;\">2</span></sup><span style=\"font-weight: 400;\">+bx+c</span></p>\n<p><span style=\"font-weight: 400;\">onde “a”, “b” e “c” são constantes e “a” é diferente de zero é conhecida como função quadrática e o respectivo gráfico é uma parábola. As coordenadas do vértice desta parábola são dadas por<br><img data-questaoobjeto=\"216758\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9mVGCr16/hl3VqVEXa4cFPWMDCLdfnRzahriSzCmuOw0mpnT8k7FKPn7X/nVby/JRjw/Dg3RCP5oYTQZB0rAJbWNzvhU5+ncHb31ePhRxa2jiITGntSOLURlIq5cMW9Cmg==\"><br>e<br><img data-questaoobjeto=\"216759\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9iamGNVv3irF7M7/fx40DJXmrS8f/k9SiKFUIIukkBmamZ/WAVb/M6/zZGnQGx+0YQLXJZq04euvKzIRT+4CRqInn/iiaEt4Ip0HClWIBGugOuGBtrMpwdHgUPpAWClaoQ==\"><br></span></p>\n<p><span style=\"font-weight: 400;\">Considerando a função quadrática</span></p>\n<p><span style=\"font-weight: 400;\">y=10x</span><sup><span style=\"font-weight: 400;\">2</span></sup><span style=\"font-weight: 400;\">-150x+300</span></p>\n<p><span style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">calcule por meio do Python x</span><sub><span style=\"font-weight: 400;\">v</span></sub><span style=\"font-weight: 400;\"> e y</span><sub><span style=\"font-weight: 400;\">v</span></sub><span style=\"font-weight: 400;\">.</span><br></span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span style=\"font-weight: 400;\">x<sub>v</sub>=4,5 e&nbsp;<span>y</span><sub>v</sub><span>=</span></span><span style=\"font-weight: 400;\">255,5</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span style=\"font-weight: 400;\">x<sub>v</sub>=4,7 e&nbsp;<span>y</span><sub>v</sub><span>=</span></span><span style=\"font-weight: 400;\">-212,5</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span style=\"font-weight: 400;\">x<sub>v</sub>=5,4 e&nbsp;<span>y</span><sub>v</sub><span>=</span></span><span style=\"font-weight: 400;\">-183,6</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p><span style=\"font-weight: 400;\">x<sub>v</sub>=7,5 e&nbsp;<span>y</span><sub>v</sub><span>=</span></span><span style=\"font-weight: 400;\">-262,5</span></p>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "783e9202-c8bc-4b52-bd77-eacf24acb0d1",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Considere o vetor v que armazena os preços de venda, em dólares, de algumas mercadorias anunciadas em um comércio eletrônico:</span></p>\n<p><span style=\"font-weight: 400;\">v=(138,40; 86,70; 90,90; 234,90; 107,70).&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\">Supondo que cada dólar corresponde a R$ 5,10, obtenha por meio do Python o vetor u que contém os preços destas mercadorias em reais.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>[[ 705.84&nbsp; 442.17&nbsp; 463.59 1197.99&nbsp; 549.27]]</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<span>[[ 512.31&nbsp; 410.12&nbsp; 455.66 1003.77&nbsp; 506.89]]</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span>[[ 720.30&nbsp; 401.56&nbsp; 432.33 1222.45&nbsp; 587.78]]</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>[[ 707.70&nbsp; 433.34&nbsp; 452.83 1123.55&nbsp; 577.69]]</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "d03ff8ba-b500-4fba-b7a6-ad43bd034a26",
+        "description": [
+          "<span style=\"font-weight: 400;\">Sabendo que A probabilidade P de ocorrência de um fato A, chamada de P(A), corresponde à divisão do número de elementos n do evento A pelo número N de elementos do espaço amostral:<br><img data-questaoobjeto=\"216760\" src=\"https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico/?id=JcbQ9MzjileoVGF47aHO9gM6bfxnvzlgXQgqWZ1KDqcvuZrajKOIAPfejlbPlvot33B7F5rxu66UuAjQWnwerR470qAG0tTG6OHr6V/CHaPfMPuzqjfHY40JE/jk+A+80babJLy+E21gZkRG8x96Yw==\"><br>determine qual é a probabilidade em porcentagem de que em um total de 12450 peças onde 231 delas apresentam defeitos uma destas peças, escolhida aleatoriamente, não apresente defeito.<br></span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "96,18%",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "97,76%",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "98,14%",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "99,10%",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "66f026c9-8b5b-44c8-a1b8-5ca2e17b8141",
+        "description": [
+          "<span style=\"font-weight: 400;\">Considere os números a=7,0102x10</span><sup><span style=\"font-weight: 400;\">5</span></sup><span style=\"font-weight: 400;\"> e b=2,1233x10</span><sup><span style=\"font-weight: 400;\">3</span></sup><span style=\"font-weight: 400;\"> na notação científica normalizada. Por meio do Python, calcule a-b apresentando o resultado com 10 casas decimais.</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>6.9889670000e+03</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>6.9889670000e+04</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span>6.9889670000e+05</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<span>6.9889670000e+06</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "57e6138a-9af2-449e-8c67-ef43921459d1",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Dados os vetores</span></p>\n<p><span style=\"font-weight: 400;\">u=(3, 6, -1)</span></p>\n<p><span style=\"font-weight: 400;\">e</span></p>\n<p><span style=\"font-weight: 400;\">v=(11, 14, 9)</span></p>\n<p><span style=\"font-weight: 400;\">obtenha por meio do Python o vetor w=u.v.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>[[108]]</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<span>[[110]]</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span>[[112]]</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>[[114]]</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "544c9a90-c442-4e1d-af8f-d5b9d26422d3",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Considerando as proposições simples</span></p>\n<p><span style=\"font-weight: 400;\">p: “Hoje é sábado.”</span></p>\n<p><span style=\"font-weight: 400;\">q: “Tenho um compromisso.”</span></p>\n<p><span style=\"font-weight: 400;\">r: “Estou disposto.”</span></p>\n<p><span style=\"font-weight: 400;\">escreva em linguagem corrente a proposição “p+r”.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span style=\"font-weight: 400;\">Hoje é sábado e estou disposto.</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span style=\"font-weight: 400;\">Hoje é sábado ou estou disposto.</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<span style=\"font-weight: 400;\">Hoje é sábado ou tenho um compromisso.</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span style=\"font-weight: 400;\">Hoje é sábado e tenho um compromisso.</span>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "ff648e76-0c5e-4aec-90a6-2e9c1af61478",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">Por meio do Python, converta o decimal 12323 na respectiva forma binária.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span>1100100011</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<span>11000010011</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span>110000100011</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span>11000000100011</span>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "ed576434-3cf8-420d-80eb-89937a2eb807",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">A seguir temos as notas em uma escala de 0 a 10 obtidas por 12 estudantes em uma determinada disciplina:</span></p>\n<p style=\"text-align: center;\"><span style=\"font-weight: 400;\">8, 7, 9, 10, 2, 7, 9, 10, 9, 3, 8, 5</span></p>\n<p><span style=\"font-weight: 400;\">Obtenha a moda.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "6",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "7",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "8",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "9",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "26f226c4-2fcb-4d80-8f49-6847434e49d8",
+        "description": [
+          "<p><span style=\"font-weight: 400;\">A seguir temos as notas em uma escala de 0 a 10 obtidas por 12 estudantes em uma determinada disciplina:</span></p>\n<p style=\"text-align: center;\"><span style=\"font-weight: 400;\">8, 7, 9, 10, 2, 7, 9, 10, 9, 3, 8, 5</span></p>\n<p><span style=\"font-weight: 400;\">Calcule a média.</span></p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "6",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "6,25",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "7",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "7,25",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "66afc0b9-62da-4876-a8f2-6ef5f7759db5",
+        "description": [
+          "<span style=\"font-weight: 400;\">Dado o vetor v=(30, 28, 12, 12, 56, 97), calcule 3v.</span><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<span style=\"font-weight: 400;\">3v=(90, 84, 36, 36, 168, 291)</span>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<span style=\"font-weight: 400;\">3v=(33, 31, 15, 15, 59, 100)</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<span style=\"font-weight: 400;\">3v=(80, 64, 66, 66, 208, 391)</span>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<span style=\"font-weight: 400;\">3v=(60, 57, 35, 35, 149, 163)</span>",
             "rightAnswer": false
           }
         ]
@@ -2546,6 +3519,40 @@
             "rightAnswer": false
           }
         ]
+      },
+      {
+        "id": "14b6008d-9bb0-48cb-90fc-8557fe8808b8",
+        "description": [
+          "<strong>Sobre as distribuições Linux, acompanhe as questões abaixo.</strong><br><br>I) As distribuições Linux, são múltiplas e são basicamente um sistema operacional, completo, também conhecida informalmente como distro.<br><br>II) Reconhecemos uma distribuição Linux, pelo fato de ter um Kernel Linux associando outros pacotes como por exemplo pacotes de aplicações, bibliotecas entre outros.<br><br>III) É possível acompanhar as distribuições existentes em sites especializados como por exemplo o https://distrowatch.com.<div class=\"row\"></div>",
+          "Assinale a única questão correta abaixo."
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "Somente a questão I, está correta.",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "Somente a questão II, está correta.",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "Somente a questão III, está correta.",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "Nenhuma das questões está correta.",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "Todas as questões estão corretas.",
+            "rightAnswer": true
+          }
+        ]
       }
     ]
   },
@@ -3598,6 +4605,176 @@
           {
             "name": "D",
             "description": "A TI se caracteriza como um importante diferencial competitivo nas organizações por meio de suas tecnologias, sistemas e segurança.<br>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "81f58d72-f701-4429-9afd-21a861cedf0d",
+        "description": [
+          "Segundo Tanenbaum, uma rede pode ser definida por seu tamanho, topologia, meio físico e protocolo utilizado. A capacidade dos computadores se comunicarem uns com os outros e, talvez mais importante, facilitarem a comunicação entre indivíduos e grupos tem sido um fator importante no crescimento da computação, nas últimas décadas.<br><br>TANENBAUM, Andrew S. Rede de Computadores. Tradução 3ª ed. Editora Campus, 1997.<div class=\"row\"></div>",
+          "<p>Por conta disso, vamos lembrar um pouco da história das redes de computadores que tiveram início na década de?</p>"
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "1980",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "1960",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "1990",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "2000",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "2010",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "01456454-9eeb-4440-9627-a7d9fb32c778",
+        "description": [
+          "A gestão de documentos é defendida por Caiçara como uma das tecnologias com maior potencial de utilização, diversas empresas apontam como um recurso capaz de gerenciar as informações de forma plena e eficaz. O autor destaca que “as etapas que compõem o processo da gestão de documentos são: captura armazenamento, gerenciamento, distribuição e preservação”.<br>CAIÇARA, C. J. Sistemas Integrados de Gestão – ERP: Uma Abordagem Gerencial. 2. ed.Curitiba: InterSaberes, 2015 - página 199.<div class=\"row\"></div>",
+          "Responda: A organização pode usar como base para organizar todos os documentos digitais e em papel, então os sistemas de gerenciamento de documentos são essencialmente o que?"
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p>Gerenciador de clientes.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p>Organizador de arquivos.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p>Marketing profissional.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p>Drive da Google.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p>Armários eletrônicos.</p>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "107c3027-c66f-40d1-af37-a185d58ed368",
+        "description": [
+          "<p>O metaverso é baseado, sobretudo, na ideia de realidade virtual e realidade aumentada. As simulações serão cruciais para gerar um mundo novo, virtualizado, e que seja gerenciado por pessoas reais com recursos reais. Ou seja, o acesso será muito similar ao que as pessoas já fazem hoje, com óculos e outras ferramentas.</p><div class=\"row\"></div>",
+          "<p>As empresas exploram o metaverso de maneira rudimentar quando realizam reuniões com aplicativos de conferência virtual, como?</p>"
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p>WhatsApp ou PhotoScan.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p>Zoom ou Microsoft Teams.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<p>Instagram ou GoogleMaps.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p>Classroom ou PlayStore.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p>Facebook ou Google Chrome.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "a657ee31-3f1e-44ee-b588-e4943b2b346a",
+        "description": [
+          "Com uso intenso de dados, grande parte do foco das empresas se concentra na análise; em outras palavras, o problema central passa a ser o que fazer com todos os dados coletados. Estes problemas potenciais de armazenamento de dados mais importantes que precisam ser considerados. Por conta disso analise a frase a seguir e determine de qual problema se refere: para que ocorra a compatibilidade com os diferentes sistemas ou aplicativos. É preciso encontrar um parceiro de armazenamento de dados com uma API aberta e um sistema de transição limpo.<div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "Segurança",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "Corrupção",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "Escala",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "Compatibilidade",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "Infraestrutura",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "1d23c44a-7117-491f-94aa-3bbbebf7c144",
+        "description": [
+          "Segundo Torres, as Mídias Sociais são sites e aplicativos que permitem conexão e interação entre os usuários. As Mídias Sociais são plataformas de comunicação que conectam pessoas em todo o mundo e ajudam o marketing a segmentar seu público, criar uma audiência e vender mais.<br>A mídia social é uma mina de ouro de dados, suas cinco características definidoras a tornam multidimensionalmente útil.<div class=\"row\"></div>",
+          "<p>O instituto de armazenamento de dados os define como?</p>\n<p>&nbsp;</p>"
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p>Heterogeneidade, escala, duplicabilidade, imediatismo e semiestrutura.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<p>Limites, redes, durabilidade, veracidade e audiência.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "Decisão, gerencial, executiva, diretiva e organizacional.",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p>Pessoas, procedimentos, software, dados e dispositivos.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p>Ações, comentários, processos, mediação e hardware.</p>",
             "rightAnswer": false
           }
         ]
