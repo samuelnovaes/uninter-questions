@@ -2,7 +2,6 @@ import { createHashRouter } from 'react-router-dom';
 import SubjectsPage from './pages/Subjects';
 import Answers from './pages/Answers';
 import Exam from './pages/Exam';
-import Feedback from './pages/Feedback';
 
 const router = createHashRouter([
   {
@@ -16,10 +15,6 @@ const router = createHashRouter([
   {
     path: '/exam/:subjectId',
     element: <Exam />
-  },
-  {
-    path: '/feedback/:subjectId/:rightAnswers/:total',
-    element: <Feedback />
   }
 ]);
 

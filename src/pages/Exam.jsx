@@ -1,33 +1,41 @@
-import { useContext } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { RepositoryContext } from '../providers/RepositoryProvider';
 import shuffleArray from '../utils/shuffleArray';
 import Header from '../components/Header';
-import { Button, Container } from '@mui/material';
+import { Button, Container, Dialog, DialogContent } from '@mui/material';
 import QuestionsContainer from '../components/QuestionsContainer';
 import Question from '../components/Question';
+import Progress from '../components/Progress';
 
 const Exam = () => {
   const subjects = useContext(RepositoryContext);
   const { subjectId } = useParams();
   const subject = subjects.find((subject) => subject.id === subjectId);
-  const questions = shuffleArray(subject.questions, 10);
-  const navigate = useNavigate();
-  const answers = {};
+  const [questions] = useState(shuffleArray(subject.questions, 10));
+  const [rightQuestions, setRightQuestions] = useState([]);
+  const [showProgress, setShowProgress] = useState(false);
+  const [finished, setFinished] = useState(false);
+  const [answers, setAnswers] = useState({});
 
   const handleQuestionChange = (id, value) => {
-    answers[id] = value;
+    setAnswers((items) => ({ ...items, [id]: value }));
+  };
+
+  const restart = () => {
+    setRightQuestions([]);
+    setAnswers({});
+    setFinished(false);
   };
 
   const checkAnswers = () => {
-    if(questions.some((question) => !answers[question.id])) {
-      alert('Preencha todas as questões!');
-      return;
-    }
-    const rightQuestions = questions.filter(
-      (question) => answers[question.id] === question.options.find((option) => option.rightAnswer).name
+    setRightQuestions(
+      questions
+        .filter((question) => answers[question.id] === question.options.find((option) => option.rightAnswer).name)
+        .map((question) => question.id)
     );
-    navigate(`/feedback/${subject.id}/${rightQuestions.length}/${questions.length}`);
+    setShowProgress(true);
+    setFinished(true);
   };
 
   return (
@@ -37,12 +45,13 @@ const Exam = () => {
         backButton='/'
         extend={
           <Button
-            onClick={checkAnswers}
+            onClick={() => finished ? restart() : checkAnswers()}
             variant='contained'
-            color='success'
+            color={finished ? 'success' : 'primary'}
             size='small'
+            disabled={Object.keys(answers).length < questions.length}
           >
-            Enviar
+            {finished ? 'Refazer' : 'Finalizar'}
           </Button>
         }
       />
@@ -57,6 +66,14 @@ const Exam = () => {
           ))}
         </QuestionsContainer>
       </Container>
+      <Dialog
+        open={showProgress}
+        onClose={() => setShowProgress(false)}
+      >
+        <DialogContent>
+          <Progress rightAnswers={rightQuestions.length} total={questions.length} />
+        </DialogContent>
+      </Dialog>
     </>
   );
 };

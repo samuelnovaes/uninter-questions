@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Search } from '@mui/icons-material';
-import { Button, Dialog, DialogActions, DialogContent, IconButton, Input, InputAdornment } from '@mui/material';
+import { Dialog, DialogContent, IconButton, Input, InputAdornment } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 const MobileSearch = styled.div`
@@ -53,9 +53,6 @@ const SearchField = ({ onChange }) => {
             value={value}
           />
         </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpenDialog(false)}>Fechar</Button>
-        </DialogActions>
       </Dialog>
     </>
   );
