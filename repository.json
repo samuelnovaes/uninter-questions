@@ -716,6 +716,516 @@
             "rightAnswer": false
           }
         ]
+      },
+      {
+        "id": "af258e7c-0331-464f-b70b-5362359faf27",
+        "description": [
+          "<p style=\"text-align: justify;\">Assinale a alternativa que aponta as expressões corretas para completar a frase a seguir.</p>\n<p style=\"text-align: justify;\">Em 1997, a Organização Internacional do Trabalho (OIT) publicou diretrizes sobre ___________________, visando ao estabelecimento de uma melhor prática de proteção de dados no contexto laboral, e como objetivo de evitar a ___________ do empregador na vida privada do trabalhador.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">proteção dos dados pessoais dos trabalhadores - interferência arbitrária</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">proteção dos dados das empresas – interferência abusiva</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">proteção dos dados pessoais dos trabalhadores - interferência abusiva</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">proteção dos dados pessoais dos trabalhadores hipervulneráveis - interferência arbitrária</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">proteção dos dados das empresas - interferência arbitrária</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "a745b461-6f71-4b5b-abf9-b36e4e926721",
+        "description": [
+          "<p style=\"text-align: justify;\">Assinale a alternativa que aponta as expressões corretas para completar a frase a seguir.</p>\n<p style=\"text-align: justify;\">É possível afirmar que existe _____________ por ato do preposto, em ocasiões que a empresa fornece as ferramentas de comunicação via internet e, portanto, será diretamente responsável pelo uso que seus empregados fazem, principalmente quando o funcionário utiliza tais meios, no ambiente de trabalho, para realizar atos ilícitos, podendo a empresa, nos termos da lei, responder pelos danos porventura causados pelos seus empregados, em razão de sua conduta ____________, justamente por não fiscalizar, vigiar e disciplinar adequadamente o exercício das atividades realizadas por seus funcionários.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">Responsabilidade penal – culposa</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">Responsabilidade civil – culposa</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">Responsabilidade civil – dolosa</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">Responsabilidade penal – dolosa</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Responsabilidade civil – ilícita</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "9a2da745-7572-4f1e-be69-4edfd69e3f5c",
+        "description": [
+          "<p style=\"text-align: justify;\">Conforme estudado em aula, é necessário que o programa de computador esteja suficientemente finalizado para seu pedido de registro ser depositado, pois, dessa forma, será garantida a máxima extensão possível para a proteção do seu código-fonte. Sobre o pedido de registro, assinale Verdadeiro ou Falso.</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp;&nbsp; ) O pedido pode ser submetido ao Inpi apenas como formulário eletrônico de registro de programa de computador (e-RPC).</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp;&nbsp;&nbsp; ) No portal do Inpi existem orientações minuciosas para preparar a documentação necessária, realizar os devidos pagamentos e proteger o arquivo que contém o código-fonte.</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp; ) A proteção será por meio de criptografia, deverá ser utilizado um algoritmo adequado para transformá-lo em um resumo digital hash, o qual será inserido no formulário eletrônico do pedido de registro do software junto ao Inpi.</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp;&nbsp;&nbsp; ) Após a conclusão do registro do software, este terá validade estendida por 5 anos a partir da sua criação ou de 1º de janeiro do ano seguinte à sua publicação.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">F, V, V, F</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">F, V, V, V</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">F, V, F, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">V, V, F, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">V, F, F, V</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "4f35e73e-ae39-4dea-9611-c543ec12e9d6",
+        "description": [
+          "<p style=\"text-align: justify;\">A Lei nº 12.965, de 23 de abril de 2014, conhecida como Marco Civil da internet, prevê alguns princípios. Qual desses princípios é falso?</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">garantia da liberdade de expressão, comunicação e manifestação de pensamento, nos termos da Constituição Federal;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">proteção da privacidade; proteção dos dados pessoais, na forma da lei;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">responsabilização dos agentes de acordo com suas atividades, nos termos da lei;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">preservação e garantia da neutralidade de rede;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">preservação da natureza coletiva da rede;</p>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "27619e67-6a80-45f8-aaeb-b1755c1d7f1d",
+        "description": [
+          "<p style=\"text-align: justify;\">Complete a frase com as expressões corretas.</p>\n<p style=\"text-align: justify;\">O conceito de consumidor é amplo, pois não se trata de definição meramente contratual, envolvendo o adquirente, visa também proteger vítimas de atos ilícitos pré-contratuais, como a _____________, bem como das práticas ________________.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">publicidade enganosa; comerciais abusivas</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">publicidade exagerada; ofensivas</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">publicidade abusiva; comerciais delitivas</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">publicidade enganosa; ilícitas</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">publicidade exagerada; comerciais abusivas</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "f761a476-72b0-49fb-98f1-234f7ea6b007",
+        "description": [
+          "<p style=\"text-align: justify;\">Complete a alternativa com a expressão correta.</p>\n<p style=\"text-align: justify;\">O provedor responsável pela guarda de registros de conexão e de acesso a aplicações de internet somente será obrigado a disponibilizar tais registros mediante ___________.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">o princípio da Boa-Fé</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">ordem policial</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">mandado de segurança</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">ordem judicial</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">requerimento administrativo</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "99d8dba7-0ef6-4b0a-bbb4-8d3d945dea90",
+        "description": [
+          "<p style=\"text-align: justify;\">Assinale a alternativa que aponta as expressões corretas para completar a frase a seguir.</p>\n<p style=\"text-align: justify;\">Algumas iniciativas legislativas, entre elas a Medida Provisória n. 927, de 22 de março de 2020, proporcionam o devido cumprimento da legislação__________, com regras específicas relacionadas não apenas ao_________, mas também sobre férias, banco de horas e outras, ainda que em caráter provisório, dada a relevância e a urgência da situação.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">Penal – trabalho</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">Trabalhista – teletrabalho</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">Civil – danos morais</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">Trabalhista – danos à saúde do trabalhador</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Civil – danos materiais</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "8fa12def-fb6f-4f0c-ad80-6b3a557a922f",
+        "description": [
+          "<p style=\"text-align: justify;\">Leia a afirmação e assinale a alternativa correta que corresponda à temática em questão.</p>\n<p style=\"text-align: justify;\">“O direito do trabalho pode ser conceituado como o ramo da ciência jurídica formado por um conjunto de princípios, regras, valores e institutos destinados à regulação das relações individuais e coletivas entre empregados e empregadores, bem como de outras relações de trabalho normativamente equiparadas à relação empregatícia, tendo por objetivo a progressividade da proteção da dignidade humana e das condições sociais, econômicas, culturais e ambientais dos trabalhadores.”</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">A indústria 4.0 objetiva aumentar a eficiência de processos produtivos, otimizando custos, reduzindo desperdício e perda de tempo, por meio do mínimo auxílio de postos de trabalho de baixa complexidade e intensa repetição, e incentivo à aquisição de novas habilidades e competências para criação de uma nova geração de empregos, que demandam qualificação e proficiência no uso de ferramentas digitais.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">O empregador é toda pessoa física que prestar serviços de natureza não eventual a empregador, sob a dependência deste e mediante salário. Enquanto que o empregado é a empresa, individual ou coletiva, que, assumindo os riscos da atividade econômica, admite, assalaria e dirige a prestação pessoal de serviço.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">Os profissionais autônomos, as instituições de benefícios mútuos, as associações recreativas ou outras instituições sem fins lucrativos, que admitirem trabalhadores como empregados são equiparados ao empregador, para os efeitos exclusivos da relação de emprego.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">A indústria 4.0, fundamentada em tecnologias de automação, internet das coisas (IoT), internet dosserviços (IoS), <em>big data analytic</em>, uso intensivo de inteligência artificial (IA) e computação em nuvem, tem como proposta aumentar a eficiência de processos produtivos, otimizando custos e reduzindo desperdício e perda de tempo.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Novas relações de trabalho e emprego surgiram na era digital, e tiveram grande crescimento notadamente por causa da crise da pandemia Covid19, e, por isso, funções de <em>web designer</em>, programador, analista de sistemas, consultor de <em>e-business</em>, analista de marketing digital, gerente de <em>compliance</em>, influenciador digital se tornaram essenciais para disseminar a cultura da tecnologia digital.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "1f1bd7d0-9fe0-471f-8e5e-d3bf978053b9",
+        "description": [
+          "<p style=\"text-align: justify;\">Assinale a alternativa que contenha todas as alternativas corretas.</p>\n<p style=\"text-align: justify;\">I. No combate contra o cibercrime, a Polícia Federal tem tomado várias iniciativas. Algumas tecnologias e plataformas vêm auxiliando a corporação a identificar criminosos com mais rapidez.</p>\n<p style=\"text-align: justify;\">II. As ferramentas desenvolvidas pela própria Polícia Federal são vantajosas porque não há necessidade de se pagar pela atualização delas.</p>\n<p style=\"text-align: justify;\">III. De acordo com o princípio da anterioridade da lei, previsto no art. 1º do Código Penal, “Não há crime sem lei anterior que o defina. Não há pena sem prévia cominação legal”. Consequentemente, devido à crescente criminalidade digital, a legislação penal precisa se manter em constante atualização, criando tipos penais que contemplem as novas modalidades de delitos informáticos.</p>\n<p style=\"text-align: justify;\">IV. A plataforma Orus permite que o policial insira nela uma requisição de dados pessoais e coletivos, que é enviada para as duas empresas aderentes ao projeto (Google e Microsoft), que respondem diretamente ao policial sobre a situação, sem a necessidade de a requisição passar por escritórios de advocacia, o que facilita os procedimentos.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">I, III e IV.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">I, II e III.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">I apenas.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">II e IV.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">I, II, III e IV.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "685c2e2f-f216-4616-84cf-69d1f6e5284b",
+        "description": [
+          "<p style=\"text-align: justify;\">Recentemente, o Brasil sediou o Encontro Multissetorial Global sobre o Futuro da Governança da Internet (NETmundial). Nesta ocasião, foi sancionado o projeto de Lei que instituiu o Marco Civil da Internet, considerado uma espécie de Constituição para uso da rede no país. Entre outros pontos, esta Lei prevê:</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">que o armazenamento de dados de qualquer empresa do ramo seja feito no Brasil.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">que os provedores da rede podem ofertar conexões diferenciadas, por exemplo, para acesso somente a emails, vídeos ou redes sociais.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">que provedores de conexão à&nbsp;<em>web</em>sejam responsabilizados pelo uso que os internautas fizerem da rede e por publicações feitas por terceiros, havendo ou não ordem judicial pela retirada dessas publicações.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">que não haja armazenamento de dados – como telefone, emails e filiação – a respeito de qualquer cidadão brasileiro.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">princípios, garantias, direitos e deveres para internautas e provedores, como a chamada neutralidade da rede.</p>",
+            "rightAnswer": true
+          }
+        ]
+      },
+      {
+        "id": "be442ee6-0b74-40dd-87bc-a5e540e94b7a",
+        "description": [
+          "<p style=\"text-align: justify;\">Complete a frase com as expressões corretas.</p>\n<p style=\"text-align: justify;\">Não se pode confundir _________ com __________, pois a liberdade associada ao ___________ de copiar, modificar e redistribuir, independe de gratuidade. Há programas que podem ser obtidos gratuitamente, mas seu autor não autoriza que ele seja modificado ou redistribuído.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">software livre, software grátis, software livre</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">software funcional, software grátis, software livre</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">software gratuito, software livre, software livre</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">software livre, software funcional, software livre</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">software econômico, software grátis, software livre</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "cdc079ba-b302-4e0f-a63d-88f3eb09ceb2",
+        "description": [
+          "<p style=\"text-align: justify;\">O provedor de aplicações de internet, ou seja, as empresas que prestam serviços ou ofertando produtos em determinado site ou portal de internet, deverá manter os respectivos registros de acesso a aplicações de internet sob sigilo. Nesse sentido, assinale a afirmação correta.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">A autoridade policial, administrativa ou o Ministério Público poderão requerer a qualquer provedor de aplicações de internet o acesso aos registros, bem como determinar que estes sejam guardados, inclusive por prazo superior a 12 meses.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">Apenas a autoridade policial poderá requerer a qualquer provedor de aplicações de internet o acesso aos registros, bem como determinar que estes sejam guardados, inclusive por prazo superior a 6 meses.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">A autoridade policial, administrativa ou o Ministério Público poderão requerer a qualquer provedor de aplicações de internet o acesso aos registros, bem como determinar que estes sejam guardados, inclusive por prazo superior a 6 meses.</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">O Ministério Público poderá requerer a qualquer provedor de aplicações de internet o acesso aos sotwares, bem como determinar que estes sejam guardados, inclusive por prazo superior a 6 meses.</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">A autoridade policial, administrativa ou o Ministério Público poderão requerer a qualquer provedor de aplicações de internet o acesso aos registros, bem como determinar que estes sejam guardados, inclusive por prazo superior a 24 meses.</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "ad569dc0-f226-442b-a3a0-2ecc60012b74",
+        "description": [
+          "<p style=\"text-align: justify;\">A Lei de Introdução às normas do Direito Brasileiro, em sua <strong>totalidade</strong>, aborda temáticas relativas a:</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">Vigência das leis; Revogação de leis; Conflito de leis no tempo; Conflito de leis no espaço (município, estado e União); Critérios de integração entre as leis no ordenamento jurídico brasileiro;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">Vigência das leis; Revogação de leis; Conflito de leis no espaço (município, estado e União); Critérios de interpretação jurídica; Critérios de integração entre as leis no ordenamento jurídico brasileiro;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">Vigência das leis; Revogação de leis; Conflito de leis no tempo; Conflito de leis no espaço (município, estado e União); Critérios de interpretação jurídica; Critérios de integração entre as leis no ordenamento jurídico brasileiro;</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">Revogação de leis; Conflito de leis no tempo; Conflito de leis no espaço (município, estado e União); Critérios de interpretação jurídica; Critérios de integração entre as leis no ordenamento jurídico brasileiro;</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">Vigência das leis; Conflito de leis no tempo; Conflito de leis no espaço (município, estado e União); Critérios de interpretação jurídica; Critérios de integração entre as leis no ordenamento jurídico brasileiro;</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "041d9b36-a6b8-4fc2-b890-6448937ecc7a",
+        "description": [
+          "<p style=\"text-align: justify;\">Complete a frase com as expressões corretas.</p>\n<p style=\"text-align: justify;\">A coleta de dados revela padrões, gostos, preferências e hábitos de consumo, inclusive os dados pessoais dos usuários, viabilizando a criação de um gigantesco e valiosíssimo _____________, com extraordinário potencial de ________________.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">conteúdo de informações essenciais - exploração financeira</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">banco de informações pessoais - exploração social e econômica</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">banco de dados, exploração econômica</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">banco de informações coletiva – exploração lítica e consentida</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">banco de dados explícitos, exploração financeira</p>",
+            "rightAnswer": false
+          }
+        ]
+      },
+      {
+        "id": "c8545002-1ff3-494f-8cfa-ed7f09e089bc",
+        "description": [
+          "<p style=\"text-align: justify;\">Sobre a relação do Direito com a Tecnologia da Informação e Comunicação, assinale Verdadeiro ou Falso.</p>\n<p style=\"text-align: justify;\">( &nbsp;&nbsp;) O estudo destes temas - conceito de Direito, suas fontes, elementos essenciais da Lei de Introdução às normas do Direito Brasileiro - são importantes para adequada interpretação do Direito e da Legislação aplicável ao contexto da Tecnologia da Informação e Comunicação.</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp; ) Possibilita maior compreensão das questões que relacionam o Direito com a ética e com normas relativas à conformidade, uma vez que, no Brasil, as leis que disciplinam tratamento de dados pessoais, responsabilidades de provedores de conexão e de aplicações de internet e proteção jurídica do consumidor de serviços digitais.</p>\n<p style=\"text-align: justify;\">(&nbsp;&nbsp; ) Destaca-se que as temáticas relativas à privacidade, à segurança digital, à proteção de dados, aos crimes virtuais, dentre outros temas juridicamente relevantes, sob a perspectiva do incentivo ao desenvolvimento tecnológico e da proteção do cidadão sob o ponto de vida social e econômico, são temas regulamentados no Brasil por meio de legislações específicas e dependem de uma adequada compreensão da legislação, a partir dos conceitos estruturantes ofertados pela Lei de Introdução às normas do Direito Brasileiro.</p><div class=\"row\"></div>",
+          ""
+        ],
+        "options": [
+          {
+            "name": "A",
+            "description": "<p style=\"text-align: justify;\">V, V, V</p>",
+            "rightAnswer": true
+          },
+          {
+            "name": "B",
+            "description": "<p style=\"text-align: justify;\">V, F, V</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "C",
+            "description": "<p style=\"text-align: justify;\">F, F, V</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "D",
+            "description": "<p style=\"text-align: justify;\">V, F, F</p>",
+            "rightAnswer": false
+          },
+          {
+            "name": "E",
+            "description": "<p style=\"text-align: justify;\">F, V, V</p>",
+            "rightAnswer": false
+          }
+        ]
       }
     ]
   },
