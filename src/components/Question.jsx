@@ -56,7 +56,7 @@ const Question = ({
               value={option.name}
               control={
                 <Radio
-                  disabled={readOnly}
+                  disabled={readOnly || finished}
                   sx={{ transform: 'translateY(-9px)' }}
                 />
               }
