@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import fs from 'fs/promises';
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
-const repositoryPath = './repository.json';
+const repositoryPath = './public/repository.json';
 
 const subjects = JSON.parse(await fs.readFile(repositoryPath));
 

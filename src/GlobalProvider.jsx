@@ -1,17 +1,18 @@
-import { createContext, useState } from 'react';
-import repository from '../repository.json';
+import { createContext, useEffect, useState } from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+import { Box, CircularProgress, CssBaseline } from '@mui/material';
 import { darkTheme, lightTheme } from './theme';
 
 export const GlobalContext = createContext([]);
 
 const GlobalProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(!localStorage.lightTheme);
+  const [subjects, setSubjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const toggleDarkTheme = () => {
     const value = !isDark;
-    if(value) {
+    if (value) {
       delete localStorage.lightTheme;
     }
     else {
@@ -20,17 +21,38 @@ const GlobalProvider = ({ children }) => {
     setIsDark(value);
   };
 
+  const loadSubjects = async () => {
+    const response = await fetch('/uninter-questions/repository.json');
+    const result = await response.json();
+    setSubjects(result);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    loadSubjects();
+  }, []);
+
   return (
     <GlobalContext.Provider
       value={{
-        subjects: repository,
+        subjects,
         isDark,
         toggleDarkTheme
       }}
     >
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
         <CssBaseline />
-        {children}
+        {loading && (
+          <Box
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+            height='100vh'
+          >
+            <CircularProgress variant='indeterminate' />
+          </Box>
+        )}
+        {!loading && children}
       </ThemeProvider>
     </GlobalContext.Provider>
   );

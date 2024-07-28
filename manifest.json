@@ -1,0 +1,78 @@
+{
+  "theme_color": "#8936FF",
+  "background_color": "#2EC6FE",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/uninter-questions/icons/icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/uninter-questions/icons/icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/uninter-questions/screenshots/subjects-mobile.png",
+      "sizes": "430x932",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/uninter-questions/screenshots/answers-mobile.png",
+      "sizes": "430x932",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/uninter-questions/screenshots/exam-result-mobile.png",
+      "sizes": "430x932",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/uninter-questions/screenshots/exam-mobile.png",
+      "sizes": "430x932",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/uninter-questions/screenshots/subjects-desktop.png",
+      "sizes": "1366x768",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/uninter-questions/screenshots/answers-desktop.png",
+      "sizes": "1366x768",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/uninter-questions/screenshots/exam-result-desktop.png",
+      "sizes": "1366x768",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/uninter-questions/screenshots/exam-desktop.png",
+      "sizes": "1366x768",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "dir": "left",
+  "lang": "pt-BR",
+  "name": "Uninter Questions",
+  "short_name": "Banco de questões da Uninter",
+  "start_url": "/uninter-questions",
+  "scope": "/uninter-questions",
+  "description": "Banco de questões do curso de Análise e Desenvolvimento de Sistemas da Uninter.",
+  "id": "com.github.samuelnovaes.uninter-questions"
+}

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { ArrowBack, DarkMode, LightMode } from '@mui/icons-material';
+import { ArrowBack, DarkMode, Home, LightMode } from '@mui/icons-material';
 import { AppBar, Box, Container, IconButton, Toolbar } from '@mui/material';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -45,7 +45,7 @@ const Header = ({ title, backButton, extend }) => {
           )}
           {!backButton && (
             <IconButton>
-              <img src='/uninter-questions/favicon.png' />
+              <Home />
             </IconButton>
           )}
           <Title>{title}</Title>
