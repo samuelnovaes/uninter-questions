@@ -11,7 +11,7 @@ const Title = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 20px;
-  margin: ${(props) => props.hasMargin ? '0 16px' : '0'};
+  margin: 0 16px;
   @media (width <= 728px) {
     font-size: 16px;
   }
@@ -43,7 +43,12 @@ const Header = ({ title, backButton, extend }) => {
               </IconButton>
             </Link>
           )}
-          <Title hasMargin={!!backButton}>{title}</Title>
+          {!backButton && (
+            <IconButton>
+              <img src='/uninter-questions/favicon.png' />
+            </IconButton>
+          )}
+          <Title>{title}</Title>
           <Box
             display='flex'
             alignItems='center'
