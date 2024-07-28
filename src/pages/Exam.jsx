@@ -7,6 +7,7 @@ import { Button, Container, Dialog, DialogContent } from '@mui/material';
 import QuestionsContainer from '../components/QuestionsContainer';
 import Question from '../components/Question';
 import Progress from '../components/Progress';
+import DialogClose from '../components/DialogClose';
 
 const Exam = () => {
   const subjects = useContext(RepositoryContext);
@@ -17,6 +18,7 @@ const Exam = () => {
   const [showProgress, setShowProgress] = useState(false);
   const [finished, setFinished] = useState(false);
   const [answers, setAnswers] = useState({});
+  const [keyId, setKeyId] = useState(crypto.randomUUID());
 
   const handleQuestionChange = (id, value) => {
     setAnswers((items) => ({ ...items, [id]: value }));
@@ -26,6 +28,7 @@ const Exam = () => {
     setRightQuestions([]);
     setAnswers({});
     setFinished(false);
+    setKeyId(crypto.randomUUID());
   };
 
   const checkAnswers = () => {
@@ -60,8 +63,9 @@ const Exam = () => {
           {questions.map((question) => (
             <Question
               question={question}
-              key={question.id}
+              key={`${question.id}-${keyId}`}
               onChange={(value) => handleQuestionChange(question.id, value)}
+              finished={finished}
             />
           ))}
         </QuestionsContainer>
@@ -73,6 +77,7 @@ const Exam = () => {
         <DialogContent>
           <Progress rightAnswers={rightQuestions.length} total={questions.length} />
         </DialogContent>
+        <DialogClose onClick={() => setShowProgress(false)} />
       </Dialog>
     </>
   );

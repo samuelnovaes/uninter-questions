@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Search } from '@mui/icons-material';
 import { Dialog, DialogContent, IconButton, Input, InputAdornment } from '@mui/material';
 import { useEffect, useState } from 'react';
+import DialogClose from './DialogClose';
 
 const MobileSearch = styled.div`
   display: block;
@@ -53,6 +54,7 @@ const SearchField = ({ onChange }) => {
             value={value}
           />
         </DialogContent>
+        <DialogClose onClick={() => setOpenDialog(false)} />
       </Dialog>
     </>
   );

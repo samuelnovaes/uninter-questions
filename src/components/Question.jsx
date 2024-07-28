@@ -1,19 +1,38 @@
-import { Box, Card, CardContent, Divider, FormControlLabel, Radio, RadioGroup } from '@mui/material';
+import { Box, Card, CardContent, Divider, FormControlLabel, Radio, RadioGroup, useTheme } from '@mui/material';
 import parse from 'html-react-parser';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 const Question = ({
   question,
   readOnly,
-  onChange
+  onChange,
+  finished
 }) => {
+  const [value, setValue] = useState(null);
+  const theme = useTheme();
+
   const handleChange = (event) => {
+    const newValue = event.target.value;
+    setValue(newValue);
     if (onChange) {
-      onChange(event.target.value);
+      onChange(newValue);
     }
   };
 
   const rightValue = question.options.find((option) => option.rightAnswer).name;
+
+  const getOptionColor = (name) => {
+    if(!finished) {
+      return null;
+    }
+    if(name === rightValue) {
+      return theme.palette.success.light;
+    }
+    if(name === value && name !== rightValue) {
+      return theme.palette.error.light;
+    }
+    return null;
+  };
 
   return (
     <Card>
@@ -46,7 +65,8 @@ const Question = ({
                   sx={{
                     display: 'flex',
                     alignItems: 'flex-start',
-                    gap: 1
+                    gap: 1,
+                    color: getOptionColor(option.name)
                   }}
                 >
                   <strong>{option.name})</strong>
