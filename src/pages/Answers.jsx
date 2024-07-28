@@ -1,15 +1,15 @@
 import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import { useContext, useState } from 'react';
-import { RepositoryContext } from '../providers/RepositoryProvider';
 import textMatch from '../utils/textMatch';
 import { Container } from '@mui/material';
 import Question from '../components/Question';
 import QuestionsContainer from '../components/QuestionsContainer';
 import SearchField from '../components/SearchField';
+import { GlobalContext } from '../GlobalProvider';
 
 const Answers = () => {
-  const subjects = useContext(RepositoryContext);
+  const { subjects } = useContext(GlobalContext);
   const { subjectId } = useParams();
   const subject = subjects.find((subject) => subject.id === subjectId);
   const [questions, setQuestions] = useState(subject.questions);

@@ -1,14 +1,14 @@
 import { useContext, useState } from 'react';
 import Header from '../components/Header';
-import { RepositoryContext } from '../providers/RepositoryProvider';
 import { Button, Card, CardActions, CardContent, Container, Divider, Typography } from '@mui/material';
 import textMatch from '../utils/textMatch';
 import { Link } from 'react-router-dom';
 import SearchField from '../components/SearchField';
 import QuestionsContainer from '../components/QuestionsContainer';
+import { GlobalContext } from '../GlobalProvider';
 
 const SubjectsPage = () => {
-  const allSubjects = useContext(RepositoryContext);
+  const { subjects: allSubjects } = useContext(GlobalContext);
   const [subjects, setSubjects] = useState(allSubjects);
 
   const onSearch = (text) => {
@@ -24,7 +24,7 @@ const SubjectsPage = () => {
       <Container sx={{ py: 4 }}>
         <QuestionsContainer>
           {subjects.map((subject) => (
-            <Card key={subject.id}>
+            <Card key={subject.id} variant='outlined'>
               <CardContent>
                 <p>{subject.subject}</p>
                 <Typography variant='caption' component='p'>{subject.questions.length} questões</Typography>

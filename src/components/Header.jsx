@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
-import { ArrowBack } from '@mui/icons-material';
-import { AppBar, Container, IconButton, Toolbar } from '@mui/material';
+import { ArrowBack, DarkMode, LightMode } from '@mui/icons-material';
+import { AppBar, Box, Container, IconButton, Toolbar } from '@mui/material';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { GlobalContext } from '../GlobalProvider';
 
 const Title = styled.div`
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: bold;
   font-size: 20px;
   margin: ${(props) => props.hasMargin ? '0 16px' : '0'};
   @media (width <= 728px) {
@@ -16,29 +17,48 @@ const Title = styled.div`
   }
 `;
 
-const Header = ({ title, backButton, extend }) => (
-  <AppBar position='sticky'>
-    <Toolbar
-      sx={{
-        paddingX: '0 !important'
-      }}
+const Header = ({ title, backButton, extend }) => {
+  const { isDark, toggleDarkTheme } = useContext(GlobalContext);
+
+  return (
+    <AppBar
+      position='sticky'
+      elevation={0}
+      variant='outlined'
+      color='inherit'
     >
-      <Container sx={{
-        display: 'flex',
-        alignItems: 'center'
-      }}>
-        {backButton && (
-          <Link to={backButton}>
-            <IconButton>
-              <ArrowBack />
+      <Toolbar
+        sx={{
+          paddingX: '0 !important'
+        }}
+      >
+        <Container sx={{
+          display: 'flex',
+          alignItems: 'center'
+        }}>
+          {backButton && (
+            <Link to={backButton}>
+              <IconButton>
+                <ArrowBack />
+              </IconButton>
+            </Link>
+          )}
+          <Title hasMargin={!!backButton}>{title}</Title>
+          <Box
+            display='flex'
+            alignItems='center'
+            gap={2}
+          >
+            {extend}
+            <IconButton onClick={toggleDarkTheme}>
+              {isDark && <LightMode />}
+              {!isDark && <DarkMode />}
             </IconButton>
-          </Link>
-        )}
-        <Title hasMargin={!!backButton}>{title}</Title>
-        {extend}
-      </Container>
-    </Toolbar>
-  </AppBar>
-);
+          </Box>
+        </Container>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Header;

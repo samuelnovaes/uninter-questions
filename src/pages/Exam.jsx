@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { RepositoryContext } from '../providers/RepositoryProvider';
 import shuffleArray from '../utils/shuffleArray';
 import Header from '../components/Header';
 import { Button, Container, Dialog, DialogContent } from '@mui/material';
@@ -8,9 +7,10 @@ import QuestionsContainer from '../components/QuestionsContainer';
 import Question from '../components/Question';
 import Progress from '../components/Progress';
 import DialogClose from '../components/DialogClose';
+import { GlobalContext } from '../GlobalProvider';
 
 const Exam = () => {
-  const subjects = useContext(RepositoryContext);
+  const { subjects } = useContext(GlobalContext);
   const { subjectId } = useParams();
   const subject = subjects.find((subject) => subject.id === subjectId);
   const [questions] = useState(shuffleArray(subject.questions, 10));

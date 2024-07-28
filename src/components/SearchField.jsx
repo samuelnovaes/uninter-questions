@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Search } from '@mui/icons-material';
-import { Dialog, DialogContent, IconButton, Input, InputAdornment } from '@mui/material';
+import { Dialog, DialogContent, IconButton, InputAdornment, OutlinedInput } from '@mui/material';
 import { useEffect, useState } from 'react';
 import DialogClose from './DialogClose';
 
@@ -29,7 +29,7 @@ const SearchField = ({ onChange }) => {
   return (
     <>
       <DesktopSearch>
-        <Input
+        <OutlinedInput
           placeholder='Buscar...'
           size='small'
           onChange={(event) => setValue(event.target.value)}
@@ -48,7 +48,8 @@ const SearchField = ({ onChange }) => {
       </MobileSearch>
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
         <DialogContent>
-          <Input
+          <OutlinedInput
+            size='small'
             placeholder='Buscar...'
             onChange={(event) => setValue(event.target.value)}
             value={value}

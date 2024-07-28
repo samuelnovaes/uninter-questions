@@ -1,5 +1,7 @@
 import { useTheme } from '@emotion/react';
 import { Box, CircularProgress, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { GlobalContext } from '../GlobalProvider';
 
 const progressContainerSX = {
   position: 'absolute',
@@ -14,6 +16,7 @@ const progressContainerSX = {
 const Progress = ({ rightAnswers, total }) => {
   const theme = useTheme();
   const percentage = Math.round((parseInt(rightAnswers) / parseInt(total)) * 100);
+  const {isDark} = useContext(GlobalContext);
 
   return (
     <Box sx={{
@@ -26,7 +29,7 @@ const Progress = ({ rightAnswers, total }) => {
           variant='determinate'
           size={200}
           value={100}
-          sx={{ color: theme.palette.grey[800] }}
+          sx={{ color: theme.palette.grey[isDark ? 800 : 100] }}
         />
       </Box>
       <Box sx={progressContainerSX}>

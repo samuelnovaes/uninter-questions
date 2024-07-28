@@ -23,16 +23,16 @@ const Question = ({
 
   const getOptionColor = (name) => {
     if(name === rightValue && (finished || readOnly)) {
-      return theme.palette.success.light;
+      return theme.palette.success.main;
     }
     if(finished && name === value && name !== rightValue) {
-      return theme.palette.error.light;
+      return theme.palette.error.main;
     }
     return theme.palette.text.primary;
   };
 
   return (
-    <Card>
+    <Card variant='outlined'>
       <CardContent>
         {question.description.map((text, i) => (
           <Fragment key={i}>
