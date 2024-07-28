@@ -22,16 +22,13 @@ const Question = ({
   const rightValue = question.options.find((option) => option.rightAnswer).name;
 
   const getOptionColor = (name) => {
-    if(!finished) {
-      return null;
-    }
-    if(name === rightValue) {
+    if(name === rightValue && (finished || readOnly)) {
       return theme.palette.success.light;
     }
-    if(name === value && name !== rightValue) {
+    if(finished && name === value && name !== rightValue) {
       return theme.palette.error.light;
     }
-    return null;
+    return theme.palette.text.primary;
   };
 
   return (
