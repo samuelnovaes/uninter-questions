@@ -22,10 +22,10 @@ const Question = ({
   const rightValue = question.options.find((option) => option.rightAnswer).name;
 
   const getOptionColor = (name) => {
-    if(name === rightValue && (finished || readOnly)) {
+    if (name === rightValue && (finished || readOnly)) {
       return theme.palette.success.main;
     }
-    if(finished && name === value && name !== rightValue) {
+    if (finished && name === value && name !== rightValue) {
       return theme.palette.error.main;
     }
     return theme.palette.text.primary;
@@ -33,7 +33,7 @@ const Question = ({
 
   return (
     <Card variant='outlined'>
-      <CardContent>
+      <CardContent sx={{ ['& img']: { maxWidth: '100%' } }}>
         {question.description.map((text, i) => (
           <Fragment key={i}>
             {parse(text)}
