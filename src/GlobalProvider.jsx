@@ -24,7 +24,7 @@ const GlobalProvider = ({ children }) => {
   const loadSubjects = async () => {
     const response = await fetch('/uninter-questions/repository.json');
     const result = await response.json();
-    setSubjects(result);
+    setSubjects(result.reverse());
     setLoading(false);
   };
 
