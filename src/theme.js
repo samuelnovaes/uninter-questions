@@ -6,6 +6,16 @@ export const darkTheme = createTheme({
     background: {
       default: colors.grey[900]
     }
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          border: 'none',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
+        }
+      }
+    }
   }
 });
 
@@ -14,6 +24,16 @@ export const lightTheme = createTheme({
     mode: 'light',
     background: {
       default: colors.grey[100]
+    }
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          border: 'none',
+          borderBottom: '1px solid rgba(0, 0, 0, 0.12)'
+        }
+      }
     }
   }
 });

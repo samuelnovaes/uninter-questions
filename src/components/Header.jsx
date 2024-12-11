@@ -1,21 +1,21 @@
 import styled from '@emotion/styled';
-import { ArrowBack, DarkMode, Home, LightMode } from '@mui/icons-material';
+import { ArrowBack, DarkMode, LightMode } from '@mui/icons-material';
 import { AppBar, Box, Container, IconButton, Toolbar } from '@mui/material';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalContext } from '../GlobalProvider';
 
-const Title = styled.div`
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 20px;
-  margin: 0 16px;
-  @media (width <= 728px) {
-    font-size: 16px;
+const Title = styled.div((props) => ({
+  flex: 1,
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  fontSize: '20px',
+  margin: props.hasIcon ? '0 16px' : '0 16px 0 0',
+  ['@media (width <= 728px)']: {
+    fontSize: '16px'
   }
-`;
+}));
 
 const Header = ({ title, backButton, extend }) => {
   const { isDark, toggleDarkTheme } = useContext(GlobalContext);
@@ -43,12 +43,7 @@ const Header = ({ title, backButton, extend }) => {
               </IconButton>
             </Link>
           )}
-          {!backButton && (
-            <IconButton>
-              <Home />
-            </IconButton>
-          )}
-          <Title>{title}</Title>
+          <Title hasIcon={!!backButton}>{title}</Title>
           <Box
             display='flex'
             alignItems='center'

@@ -4,19 +4,19 @@ import { Dialog, DialogContent, IconButton, InputAdornment, OutlinedInput } from
 import { useEffect, useState } from 'react';
 import DialogClose from './DialogClose';
 
-const MobileSearch = styled.div`
-  display: block;
-  @media (width >= 728px) {
-    display: none;
+const MobileSearch = styled.div({
+  display: 'block',
+  ['@media (width >= 728px)']: {
+    display: 'none'
   }
-`;
+});
 
-const DesktopSearch = styled.div`
-  display: block;
-  @media (width < 728px) {
-    display: none;
+const DesktopSearch = styled.div({
+  display: 'block',
+  ['@media (width < 728px)']: {
+    display: 'none'
   }
-`;
+});
 
 const SearchField = ({ onChange }) => {
   const [value, setValue] = useState('');
