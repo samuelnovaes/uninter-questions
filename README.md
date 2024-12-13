@@ -4,8 +4,11 @@ Banco de questões e simulados do curso de Análise e Desenvolvimento de Sistema
 
 # Como contribuir
 
-- Clone o repositório
-- Execute o script `npm run crawler`
-- Entre com seu RU e senha do AVA
-- Aguarde o robô escanear todas as disciplinas
-- Abra um pull request
+- Tenho o [Node.js](https://nodejs.org/pt) instalado na sua máquina.
+- Clone o repositório: `git clone https://github.com/samuelnovaes/uninter-questions.git`.
+- Entre no diretório do projeto: `cd ./uninter-questions`,
+- Instale as dependências: `npm install`.
+- Execute o crawler: `npm run crawler`.
+- Entre com seu RU e senha na tela de login do AVA.
+- Aguarde o robô escanear todas as disciplinas.
+- Abra um pull request.
