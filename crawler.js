@@ -6,10 +6,6 @@ dotenv.config();
 
 const { RU, SENHA } = process.env;
 
-if (!RU || !SENHA) {
-  throw new Error('RU e/ou senha não definido no arquivo .env');
-}
-
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
 const subjectIdRegExp = /disciplina_(\d+)/;
@@ -18,7 +14,7 @@ await fs.ensureFile(repositoryPath);
 const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless: !(process.argv[2] === 'show'),
+  headless: !!(RU && SENHA),
   defaultViewport: null,
   protocolTimeout: 0
 });
@@ -63,7 +59,7 @@ async function isRightAnswer(choiceElement, hasRightAnswer) {
   if (hasRightAnswer) {
     return (await (await choiceElement.getProperty('className')).jsonValue()).includes('question-choice-active');
   }
-  if(await choiceElement.$('.label-default')) {
+  if (await choiceElement.$('.label-default')) {
     return true;
   }
   return false;
@@ -96,7 +92,7 @@ const parseQuestions = async (btnAnswer, subjectId) => {
     const isWrong = !!(await questionElement.$('.label-danger'));
     const hasRightAnswer = !!(await questionElement.$('.question-choice-active'));
 
-    if(isWrong && !hasRightAnswer) {
+    if (isWrong && !hasRightAnswer) {
       break;
     }
 
@@ -158,23 +154,30 @@ const parseSubject = async (id) => {
 log('Acessando AVA');
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
-await page.type('input#ru', process.env.RU);
-await page.type('input#senha', process.env.SENHA);
-await click('#loginBtn');
+if (RU && SENHA) {
+  await page.type('input#ru', RU);
+  await page.type('input#senha', SENHA);
+  await click('#loginBtn');
+}
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
 await waitFor('#curso_634');
 await click('#curso_634 a');
 await waitFor('.titulo-status', '.sv-item');
 
-const subjects = await page.$$('.sv-item');
+const topics = await page.$$('.sv-item');
+const subjects = [];
 
-for (const [i, element] of subjects.entries()) {
-  log(`Realizando varredura: ${i + 1}/${subjects.length}`);
-  const id = await page.evaluate((el) => el.id, element);
+for (const topic of topics) {
+  const id = await page.evaluate((el) => el.id, topic);
   if (subjectIdRegExp.test(id)) {
-    await parseSubject(id.match(subjectIdRegExp)[1]);
+    subjects.push(id.match(subjectIdRegExp)[1]);
   }
+}
+
+for (const [i, id] of subjects.entries()) {
+  log(`Realizando varredura: ${i + 1}/${subjects.length}`);
+  await parseSubject(id);
 }
 
 log('Varredura finalizada');
