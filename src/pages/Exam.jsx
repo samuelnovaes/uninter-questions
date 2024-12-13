@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import shuffleArray from '../utils/shuffleArray';
 import Header from '../components/Header';
@@ -41,6 +41,10 @@ const Exam = () => {
     setShowProgress(true);
     setFinished(true);
   };
+
+  useEffect(() => {
+    document.title = `Simulado - ${subject.subject}`;
+  }, [subject]);
 
   return (
     <>

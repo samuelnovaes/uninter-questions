@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { Button, Card, CardActions, CardContent, Container, Divider, Typography } from '@mui/material';
 import textMatch from '../utils/textMatch';
@@ -14,6 +14,10 @@ const SubjectsPage = () => {
   const onSearch = (text) => {
     setSubjects(allSubjects.filter((subject) => textMatch(subject.subject, text)));
   };
+
+  useEffect(() => {
+    document.title = 'Disciplinas';
+  }, []);
 
   return (
     <>

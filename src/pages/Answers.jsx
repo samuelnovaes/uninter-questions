@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import textMatch from '../utils/textMatch';
 import { Container } from '@mui/material';
 import Question from '../components/Question';
@@ -14,6 +14,10 @@ const Answers = () => {
   const { subjectId } = useParams();
   const subject = subjects.find((subject) => subject.id === subjectId);
   const [questions, setQuestions] = useState(subject.questions);
+
+  useEffect(() => {
+    document.title = `Gabarito - ${subject.subject}`;
+  }, [subject]);
 
   const onSearch = (text) => {
     setQuestions(subject.questions.filter((question) => {
