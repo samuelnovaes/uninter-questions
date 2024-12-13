@@ -80,20 +80,20 @@ const parseQuestions = async (btnAnswer, subjectId) => {
 
   for (const questionElement of questionsElements) {
     if (!await questionElement.$('.question-choice-label')) {
-      break;
+      continue;
     }
 
     const questionId = await page.evaluate((el) => el.dataset.idq, questionElement);
 
     if (subject.questions.some((item) => item.id === questionId)) {
-      break;
+      continue;
     }
 
     const isWrong = !!(await questionElement.$('.label-danger'));
     const hasRightAnswer = !!(await questionElement.$('.question-choice-active'));
 
     if (isWrong && !hasRightAnswer) {
-      break;
+      continue;
     }
 
     const question = {
