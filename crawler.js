@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import puppeteer from 'puppeteer';
-import fs from 'fs/promises';
+import fs from 'fs-extra';
 
 dotenv.config();
 
@@ -14,10 +14,11 @@ const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
 const subjectIdRegExp = /disciplina_(\d+)/;
 
-const repository = JSON.parse(await fs.readFile(repositoryPath));
+await fs.ensureFile(repositoryPath);
+const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless: true,
+  headless: !(process.argv[2] === 'show'),
   defaultViewport: null,
   protocolTimeout: 0
 });
@@ -30,7 +31,7 @@ const log = (message) => {
 };
 
 const click = async (node) => {
-  const element = typeof node == 'string' ? await page.$(node) : node;
+  const element = typeof node === 'string' ? await page.$(node) : node;
   await page.evaluate((el) => el.click(), element);
 };
 
@@ -58,6 +59,16 @@ async function* iterate(selector) {
   }
 };
 
+async function isRightAnswer(choiceElement, hasRightAnswer) {
+  if (hasRightAnswer) {
+    return (await (await choiceElement.getProperty('className')).jsonValue()).includes('question-choice-active');
+  }
+  if(await choiceElement.$('.label-default')) {
+    return true;
+  }
+  return false;
+}
+
 const parseQuestions = async (btnAnswer, subjectId) => {
   await click(btnAnswer);
   await waitFor('#conteudoAvaliacao', 'div.show');
@@ -72,32 +83,40 @@ const parseQuestions = async (btnAnswer, subjectId) => {
   };
 
   for (const questionElement of questionsElements) {
-    const choicesElements = await questionElement.$$('.question-choice');
-    const questionTexts = await questionElement.$$('.question-text');
-
     if (!await questionElement.$('.question-choice-label')) {
       break;
     }
 
+    const questionId = await page.evaluate((el) => el.dataset.idq, questionElement);
+
+    if (subject.questions.some((item) => item.id === questionId)) {
+      break;
+    }
+
+    const isWrong = !!(await questionElement.$('.label-danger'));
+    const hasRightAnswer = !!(await questionElement.$('.question-choice-active'));
+
+    if(isWrong && !hasRightAnswer) {
+      break;
+    }
+
     const question = {
-      id: await page.evaluate((el) => el.dataset.idq, questionElement),
+      id: questionId,
       description: [],
       options: []
     };
 
-    if (subject.questions.some((item) => item.id === question.id)) {
-      break;
-    }
-
+    const questionTexts = await questionElement.$$('.question-text');
     for (const questionText of questionTexts) {
       question.description.push(await page.evaluate((el) => el.innerHTML, questionText));
     }
 
+    const choicesElements = await questionElement.$$('.question-choice');
     for (const choiceElement of choicesElements) {
       question.options.push({
         name: await getText(choiceElement, '.question-choice-label'),
         description: await getText(choiceElement, '.question-choice-body'),
-        rightAnswer: (await (await choiceElement.getProperty('className')).jsonValue()).includes('question-choice-active')
+        rightAnswer: await isRightAnswer(choiceElement, hasRightAnswer)
       });
     }
 
