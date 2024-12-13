@@ -8,6 +8,7 @@ import Question from '../components/Question';
 import Progress from '../components/Progress';
 import DialogClose from '../components/DialogClose';
 import { GlobalContext } from '../GlobalProvider';
+import PrintButton from '../components/PrintButton';
 
 const Exam = () => {
   const { subjects } = useContext(GlobalContext);
@@ -47,15 +48,18 @@ const Exam = () => {
         title={`Simulado - ${subject.subject}`}
         backButton='/'
         extend={
-          <Button
-            onClick={() => finished ? restart() : checkAnswers()}
-            variant='contained'
-            color={finished ? 'success' : 'primary'}
-            size='small'
-            disabled={Object.keys(answers).length < questions.length}
-          >
-            {finished ? 'Refazer' : 'Finalizar'}
-          </Button>
+          <>
+            <Button
+              onClick={() => finished ? restart() : checkAnswers()}
+              variant='contained'
+              color={finished ? 'success' : 'primary'}
+              size='small'
+              disabled={Object.keys(answers).length < questions.length}
+            >
+              {finished ? 'Refazer' : 'Finalizar'}
+            </Button>
+            <PrintButton />
+          </>
         }
       />
       <Container sx={{ py: 4 }}>

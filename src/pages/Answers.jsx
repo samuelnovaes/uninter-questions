@@ -7,6 +7,7 @@ import Question from '../components/Question';
 import QuestionsContainer from '../components/QuestionsContainer';
 import SearchField from '../components/SearchField';
 import { GlobalContext } from '../GlobalProvider';
+import PrintButton from '../components/PrintButton';
 
 const Answers = () => {
   const { subjects } = useContext(GlobalContext);
@@ -26,7 +27,12 @@ const Answers = () => {
       <Header
         title={`Gabarito - ${subject.subject}`}
         backButton='/'
-        extend={<SearchField onChange={onSearch} />}
+        extend={(
+          <>
+            <SearchField onChange={onSearch} />
+            <PrintButton />
+          </>
+        )}
       />
       <Container sx={{ py: 4 }}>
         <QuestionsContainer>

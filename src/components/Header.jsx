@@ -26,6 +26,7 @@ const Header = ({ title, backButton, extend }) => {
       elevation={0}
       variant='outlined'
       color='inherit'
+      className='no-print'
     >
       <Toolbar
         sx={{
