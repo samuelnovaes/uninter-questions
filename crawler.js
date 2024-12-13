@@ -161,6 +161,8 @@ if (RU && SENHA) {
 }
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
+await waitFor('.link-escola-meus-cursos');
+await click('.link-escola-meus-cursos');
 await waitFor('#curso_634');
 await click('#curso_634 .link-curso');
 await waitFor('.titulo-status', '.sv-item');
