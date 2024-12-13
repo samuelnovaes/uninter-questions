@@ -31,6 +31,7 @@
     "dotenv": "^16.4.7",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.4",
+    "fs-extra": "^11.2.0",
     "globals": "^15.8.0",
     "puppeteer": "^22.13.1",
     "vite-plugin-pwa": "^0.20.1"
