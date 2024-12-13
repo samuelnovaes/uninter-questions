@@ -6,12 +6,13 @@ dotenv.config();
 
 const { RU, SENHA } = process.env;
 
-if(!RU || !SENHA) {
+if (!RU || !SENHA) {
   throw new Error('RU e/ou senha não definido no arquivo .env');
 }
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
+const subjectIdRegExp = /disciplina_(\d+)/;
 
 const repository = JSON.parse(await fs.readFile(repositoryPath));
 
@@ -57,15 +58,15 @@ async function* iterate(selector) {
   }
 };
 
-const parseQuestions = async (btnAnswer) => {
+const parseQuestions = async (btnAnswer, subjectId) => {
   await click(btnAnswer);
   await waitFor('#conteudoAvaliacao', 'div.show');
 
   const subjectName = await getText(page, '#sidebarCurrentArea span:first-child');
   const questionsElements = await page.$$('div.show');
 
-  const subject = repository.find((item) => item.subject === subjectName) || {
-    id: crypto.randomUUID(),
+  const subject = repository.find((item) => item.id === subjectId) || {
+    id: subjectId,
     subject: subjectName,
     questions: []
   };
@@ -79,17 +80,17 @@ const parseQuestions = async (btnAnswer) => {
     }
 
     const question = {
-      id: crypto.randomUUID(),
+      id: await page.evaluate((el) => el.dataset.idq, questionElement),
       description: [],
       options: []
     };
 
-    for (const questionText of questionTexts) {
-      question.description.push(await page.evaluate((el) => el.innerHTML, questionText));
+    if (subject.questions.some((item) => item.id === question.id)) {
+      break;
     }
 
-    if (subject.questions.some((item) => JSON.stringify(item.description) === JSON.stringify(question.description))) {
-      break;
+    for (const questionText of questionTexts) {
+      question.description.push(await page.evaluate((el) => el.innerHTML, questionText));
     }
 
     for (const choiceElement of choicesElements) {
@@ -111,12 +112,12 @@ const parseQuestions = async (btnAnswer) => {
   await waitFor('.btnDetalhes');
 };
 
-const parseExercise = async (detailLink) => {
+const parseExercise = async (detailLink, subjectId) => {
   await click(detailLink);
   await waitFor('.btnDetalhes');
   for await (const element of iterate('.corpoListaAvaliacaoUsuario')) {
     if (await element.$('.nota')) {
-      await parseQuestions(await element.$('.btnDetalhes'));
+      await parseQuestions(await element.$('.btnDetalhes'), subjectId);
     }
   }
   await click('#avaliacaoUsuarioListaVoltar');
@@ -124,12 +125,12 @@ const parseExercise = async (detailLink) => {
 };
 
 const parseSubject = async (id) => {
-  await click(`#${id} .link-disciplina`);
+  await click(`#disciplina_${id} .link-disciplina`);
   await waitFor('#divMenuLateralSala', '#leftSidebarItemView header');
   await click((await page.$$('#leftSidebarItemView header a'))[1]);
   await waitFor('#theList', '.detalhesAvaliacaoUsuario, .alert-danger');
   for await (const element of iterate('.detalhesAvaliacaoUsuario')) {
-    await parseExercise(element);
+    await parseExercise(element, id);
   }
   await click('a[href="#/ava"]');
   await waitFor('.titulo-status', '.sv-item');
@@ -138,32 +139,25 @@ const parseSubject = async (id) => {
 log('Acessando AVA');
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
-
-log('Entrando com RU e senha');
 await page.type('input#ru', process.env.RU);
 await page.type('input#senha', process.env.SENHA);
 await click('#loginBtn');
-
-log('Consultando cursos');
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
 await waitFor('#curso_634');
-
-log('Acessando curso ADS');
 await click('#curso_634 a');
 await waitFor('.titulo-status', '.sv-item');
 
 const subjects = await page.$$('.sv-item');
 
-log('Realizando varredura: 0%');
 for (const [i, element] of subjects.entries()) {
+  log(`Realizando varredura: ${i + 1}/${subjects.length}`);
   const id = await page.evaluate((el) => el.id, element);
-  if (/disciplina_\d+/.test(id)) {
-    await parseSubject(id);
+  if (subjectIdRegExp.test(id)) {
+    await parseSubject(id.match(subjectIdRegExp)[1]);
   }
-  log(`Realizando varredura: ${parseInt(((i + 1) / subjects.length) * 100)}%`);
 }
 
-log('Finalizando');
+log('Varredura finalizada');
 await fs.writeFile(repositoryPath, JSON.stringify(repository));
 await browser.close();
