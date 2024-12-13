@@ -14,7 +14,7 @@ await fs.ensureFile(repositoryPath);
 const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless: !!(RU && SENHA),
+  headless: false,
   defaultViewport: null,
   protocolTimeout: 0
 });
@@ -162,7 +162,7 @@ if (RU && SENHA) {
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
 await waitFor('#curso_634');
-await click('#curso_634 a');
+await click('#curso_634 .link-curso');
 await waitFor('.titulo-status', '.sv-item');
 
 const topics = await page.$$('.sv-item');
