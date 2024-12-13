@@ -24,7 +24,7 @@ const GlobalProvider = ({ children }) => {
   const loadSubjects = async () => {
     const response = await fetch('/uninter-questions/repository.json');
     const result = await response.json();
-    setSubjects(result.reverse());
+    setSubjects(result.sort((a, b) => a.subject > b.subject ? 1 : -1));
     setLoading(false);
   };
 
