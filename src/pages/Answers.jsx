@@ -20,10 +20,7 @@ const Answers = () => {
   }, [subject]);
 
   const onSearch = (text) => {
-    setQuestions(subject.questions.filter((question) => {
-      const fullText = question.description.reduce((result, description) => `${result} ${description}`, '');
-      return textMatch(fullText, text);
-    }));
+    setQuestions(subject.questions.filter((question) => textMatch(question.description.join(' '), text)));
   };
 
   return (
