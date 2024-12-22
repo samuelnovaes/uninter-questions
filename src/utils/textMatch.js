@@ -1,47 +1,37 @@
-const removeDuplicatedSpaces = (text) => {
-  let transformedText = text;
+String.prototype.afterCleanUp = function () {
+  let transformedText = this
+    .replaceAll(String.fromCharCode(160), ' ')
+    .toLowerCase()
+    .trim();
   while (/\s{2,}/.test(transformedText)) {
     transformedText = transformedText.replace(/\s{2,}/g, ' ');
   }
   return transformedText;
 };
 
-const cleanSource = (source) => {
-  let transformedText = source
+String.prototype.preCleanUp = function () {
+  return this
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[\s]/g, ' ')
-    .replace(/<br\\?>/ig, ' ')
-    .replace(/<\/?[^>]+(>|$)/g, '')
-    .replace(/&amp;/ig, '&')
-    .replace(/&lt;/ig, '<')
-    .replace(/&gt;/ig, '>')
-    .replace(/&nbsp;/ig, ' ')
-    .replace(/&quot;/ig, '"')
-    .replace(/&apos;/ig, '\'')
-    .replaceAll(String.fromCharCode(160), ' ')
-    .toLowerCase()
-    .trim();
-  transformedText = removeDuplicatedSpaces(transformedText);
-  return transformedText;
+    .replace(/[\s]/g, ' ');
 };
 
-const cleanQuery = (text) => {
-  let transformedText = text
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[\s]/g, ' ')
-    .replaceAll(String.fromCharCode(160), ' ')
-    .toLowerCase()
-    .trim();
-  transformedText = removeDuplicatedSpaces(transformedText);
-  return transformedText;
-};
+const cleanSource = (source) => source
+  .preCleanUp()
+  .replace(/<br\\?>/ig, ' ')
+  .replace(/<\/?[^>]+(>|$)/g, '')
+  .replace(/&amp;/ig, '&')
+  .replace(/&lt;/ig, '<')
+  .replace(/&gt;/ig, '>')
+  .replace(/&nbsp;/ig, ' ')
+  .replace(/&quot;/ig, '"')
+  .replace(/&apos;/ig, '\'')
+  .afterCleanUp();
 
-const textMatch = (source, query) => {
-  const textSource = cleanSource(source);
-  const textQuery = cleanQuery(query);
-  return textSource.includes(textQuery);
-};
+const cleanQuery = (text) => text
+  .preCleanUp()
+  .afterCleanUp();
+
+const textMatch = (source, query) => cleanSource(source).includes(cleanQuery(query));
 
 export default textMatch;
