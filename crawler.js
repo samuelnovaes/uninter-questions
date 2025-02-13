@@ -143,7 +143,7 @@ const parseSubject = async (id) => {
   await click(`#disciplina_${id} .link-disciplina`);
   await waitFor('#divMenuLateralSala', '#leftSidebarItemView header');
   await click((await page.$$('#leftSidebarItemView header a'))[1]);
-  await waitFor('#theList', '.detalhesAvaliacaoUsuario, .alert-danger');
+  await waitFor('#theList', '.titulo-avaliacao, .alert-danger');
   for await (const element of iterate('.detalhesAvaliacaoUsuario')) {
     await parseExercise(element, id);
   }
