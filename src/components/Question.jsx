@@ -19,7 +19,7 @@ const Question = ({
     }
   };
 
-  const rightValue = question.options.find((option) => option.rightAnswer).name;
+  const rightValue = question.options.find((option) => option.rightAnswer)?.name;
 
   const getOptionColor = (name) => {
     if (name === rightValue && (finished || readOnly)) {
