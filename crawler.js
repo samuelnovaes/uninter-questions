@@ -156,7 +156,6 @@ const parseSubject = async (id) => {
 };
 
 log('Acessando AVA');
-
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
 
