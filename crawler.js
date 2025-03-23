@@ -116,6 +116,10 @@ const parseQuestions = async (btnAnswer, subjectId) => {
       });
     }
 
+    if(!question.options.some(option => option.rightAnswer)) {
+      continue;
+    }
+
     subject.questions.push(question);
   }
 
@@ -152,16 +156,27 @@ const parseSubject = async (id) => {
 };
 
 log('Acessando AVA');
+
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
+
 if (RU && SENHA) {
   await page.type('input#ru', RU);
   await page.type('input#senha', SENHA);
   await click('#loginBtn');
 }
+
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
 await waitFor('.link-escola-meus-cursos');
+
+log('Aguardando por modal de pesquisa');
+await page.waitForSelector('#podeResponderDepois', { timeout: 5000 });
+const btnResponderDepois = await page.$('#podeResponderDepois');
+if (btnResponderDepois) {
+  await click(btnResponderDepois);
+}
+
 await click('.link-escola-meus-cursos');
 await waitFor('#curso_634');
 await click('#curso_634 .link-curso');
