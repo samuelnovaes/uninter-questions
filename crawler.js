@@ -67,7 +67,7 @@ async function isRightAnswer(choiceElement, hasRightAnswer) {
 
 const parseQuestions = async (btnAnswer, subjectId) => {
   await click(btnAnswer);
-  await waitFor('#conteudoAvaliacao', 'div.show');
+  await waitFor('#conteudoAvaliacao', 'div.show, div.alert-warning');
 
   const subjectName = await getText(page, '#sidebarCurrentArea span:first-child');
   const questionsElements = await page.$$('div.show');
