@@ -26,7 +26,8 @@ export default [
       'indent': ['error', 2],
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off'
+      'react/prop-types': 'off',
+      'no-empty': 'off'
     }
   }
 ];

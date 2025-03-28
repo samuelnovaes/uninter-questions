@@ -116,7 +116,7 @@ const parseQuestions = async (btnAnswer, subjectId) => {
       });
     }
 
-    if(!question.options.some(option => option.rightAnswer)) {
+    if (!question.options.some(option => option.rightAnswer)) {
       continue;
     }
 
@@ -170,7 +170,9 @@ await click('#loginBoxAva');
 await waitFor('.link-escola-meus-cursos');
 
 log('Aguardando por modal de pesquisa');
-await page.waitForSelector('#podeResponderDepois', { timeout: 5000 });
+try {
+  await page.waitForSelector('#podeResponderDepois', { timeout: 5000 });
+} catch (e) { }
 const btnResponderDepois = await page.$('#podeResponderDepois');
 if (btnResponderDepois) {
   await click(btnResponderDepois);
