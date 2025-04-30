@@ -55,8 +55,8 @@ const Field = ({
   );
 };
 
-const SearchField = ({ onChange }) => {
-  const [value, setValue] = useState('');
+const SearchField = ({ onChange, initialValue = '' }) => {
+  const [value, setValue] = useState(initialValue);
   const [openSearch, setOpenSearch] = useState(false);
 
   useEffect(() => {
