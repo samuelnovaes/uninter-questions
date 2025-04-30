@@ -15,6 +15,13 @@ export const darkTheme = createTheme({
           borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
         }
       }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#000000'
+        }
+      }
     }
   }
 });
@@ -32,6 +39,13 @@ export const lightTheme = createTheme({
         root: {
           border: 'none',
           borderBottom: '1px solid rgba(0, 0, 0, 0.12)'
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#FFFFFF'
         }
       }
     }
