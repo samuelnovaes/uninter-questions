@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 import SearchField from '../components/SearchField';
 import QuestionsContainer from '../components/QuestionsContainer';
 import { GlobalContext } from '../GlobalProvider';
+import useSessionStorage from '../hooks/useStorage';
 
 const SubjectsPage = () => {
   const { subjects: allSubjects } = useContext(GlobalContext);
   const [subjects, setSubjects] = useState(allSubjects);
+  const [searchText, setSearchText] = useSessionStorage('subjectsSearch', '');
 
   const onSearch = (text) => {
+    setSearchText(text);
     setSubjects(allSubjects.filter((subject) => textMatch(subject.subject, text)));
   };
 
@@ -23,7 +26,7 @@ const SubjectsPage = () => {
     <>
       <Header
         title='Disciplinas'
-        extend={<SearchField onChange={onSearch} />}
+        extend={<SearchField onChange={onSearch} initialValue={searchText} />}
       />
       <Container sx={{ py: 4 }}>
         <QuestionsContainer>
