@@ -23,6 +23,11 @@ const Field = ({
   setValue,
   setOpenSearch = () => { }
 }) => {
+  const handleKeyDown = (event) => {
+    if(event.key === 'Enter') {
+      setOpenSearch(false);
+    }
+  };
   return (
     <OutlinedInput
       sx={{
@@ -40,6 +45,7 @@ const Field = ({
       onChange={(event) => setValue(event.target.value)}
       value={value}
       onBlur={() => setOpenSearch(false)}
+      onKeyDown={handleKeyDown}
       endAdornment={
         <InputAdornment position='end'>
           <Search />
