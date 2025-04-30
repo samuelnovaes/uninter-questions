@@ -11,7 +11,7 @@ const Title = styled.div((props) => ({
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   fontSize: '20px',
-  margin: props.hasIcon ? '0 16px' : '0 16px 0 0',
+  margin: props.hasIcon ? '0 16px' : '0 16px 0 8px',
   ['@media (width <= 728px)']: {
     fontSize: '16px'
   }

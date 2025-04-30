@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 import { Search } from '@mui/icons-material';
-import { Dialog, DialogContent, IconButton, InputAdornment, OutlinedInput } from '@mui/material';
+import { IconButton, InputAdornment, OutlinedInput } from '@mui/material';
 import { useEffect, useState } from 'react';
-import DialogClose from './DialogClose';
 
 const MobileSearch = styled.div({
   display: 'block',
@@ -18,9 +17,41 @@ const DesktopSearch = styled.div({
   }
 });
 
+const Field = ({
+  mobile,
+  value,
+  setValue,
+  setOpenSearch = () => { }
+}) => {
+  return (
+    <OutlinedInput
+      sx={{
+        ...mobile && {
+          position: 'absolute',
+          width: 'calc(100vw - 32px)',
+          top: 8,
+          left: 16,
+          zIndex: 1
+        }
+      }}
+      autoFocus
+      placeholder='Buscar...'
+      size='small'
+      onChange={(event) => setValue(event.target.value)}
+      value={value}
+      onBlur={() => setOpenSearch(false)}
+      endAdornment={
+        <InputAdornment position='end'>
+          <Search />
+        </InputAdornment>
+      }
+    />
+  );
+};
+
 const SearchField = ({ onChange }) => {
   const [value, setValue] = useState('');
-  const [openDialog, setOpenDialog] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
 
   useEffect(() => {
     onChange(value);
@@ -29,34 +60,23 @@ const SearchField = ({ onChange }) => {
   return (
     <>
       <DesktopSearch>
-        <OutlinedInput
-          placeholder='Buscar...'
-          size='small'
-          onChange={(event) => setValue(event.target.value)}
-          value={value}
-          endAdornment={
-            <InputAdornment position='end'>
-              <Search />
-            </InputAdornment>
-          }
-        />
+        <Field value={value} setValue={setValue} />
       </DesktopSearch>
       <MobileSearch>
-        <IconButton onClick={() => setOpenDialog(true)}>
-          <Search />
-        </IconButton>
-      </MobileSearch>
-      <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
-        <DialogContent>
-          <OutlinedInput
-            size='small'
-            placeholder='Buscar...'
-            onChange={(event) => setValue(event.target.value)}
+        {openSearch && (
+          <Field
+            mobile
             value={value}
+            setValue={setValue}
+            setOpenSearch={setOpenSearch}
           />
-        </DialogContent>
-        <DialogClose onClick={() => setOpenDialog(false)} />
-      </Dialog>
+        )}
+        {!openSearch && (
+          <IconButton onClick={() => setOpenSearch(true)}>
+            <Search />
+          </IconButton>
+        )}
+      </MobileSearch>
     </>
   );
 };
