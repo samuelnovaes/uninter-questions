@@ -15,25 +15,25 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
-    "@fontsource/roboto": "^5.0.13",
-    "@mui/icons-material": "^5.16.4",
-    "@mui/material": "^5.16.4",
-    "html-react-parser": "^5.1.12",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/roboto": "^5.2.5",
+    "@mui/icons-material": "^5.17.1",
+    "@mui/material": "^5.17.1",
+    "html-react-parser": "^5.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.7.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "dotenv": "^16.4.7",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.4",
-    "fs-extra": "^11.2.0",
-    "globals": "^15.8.0",
-    "puppeteer": "^22.13.1",
-    "vite-plugin-pwa": "^0.20.1"
+    "@eslint/js": "^9.27.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "dotenv": "^16.5.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "fs-extra": "^11.3.0",
+    "globals": "^15.15.0",
+    "puppeteer": "^22.15.0",
+    "vite-plugin-pwa": "^0.21.2"
   }
 }
