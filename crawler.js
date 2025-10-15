@@ -188,7 +188,8 @@ const subjects = [];
 
 for (const topic of topics) {
   const id = await page.evaluate((el) => el.id, topic);
-  if (subjectIdRegExp.test(id)) {
+  const done = await topic.$('.icon-thumbs-o-up');
+  if (subjectIdRegExp.test(id) && !done) {
     subjects.push(id.match(subjectIdRegExp)[1]);
   }
 }
