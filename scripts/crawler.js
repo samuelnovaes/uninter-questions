@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import puppeteer from 'puppeteer';
 import fs from 'fs-extra';
 import { program } from 'commander';
+import chalk from 'chalk';
 
 dotenv.config();
 
@@ -149,6 +150,11 @@ const parseExercise = async (detailLink, subjectId, subjectName) => {
   await waitFor('#theList', '.detalhesAvaliacaoUsuario');
 };
 
+const progress = (part, total) => {
+  const p = Math.round((part / total) * 10);
+  return '▮'.repeat(p).padEnd(10, '▯');
+};
+
 const logProgress = (
   subjectIndex,
   subjectTotal,
@@ -158,9 +164,9 @@ const logProgress = (
   exerciseName
 ) => {
   log(
-    'Realizando varredura...\n'+
-    `Disciplina: ${subjectIndex}/${subjectTotal} - ${subjectName}\n`+
-    (exerciseTotal ? `Avaliação: ${exerciseIndex}/${exerciseTotal} - ${exerciseName}` : 'Avaliação: ---')
+    'Realizando varredura...\n\n'+
+    `${progress(subjectIndex, subjectTotal)} ${subjectName}\n`+
+    (exerciseName ? `${chalk.gray(`${progress(exerciseIndex, exerciseTotal)} ${exerciseName}`)}\n` : '\n')
   );
 };
 
