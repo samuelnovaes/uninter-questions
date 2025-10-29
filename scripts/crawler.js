@@ -151,8 +151,9 @@ const parseExercise = async (detailLink, subjectId, subjectName) => {
 };
 
 const progress = (part, total) => {
-  const p = Math.round((part / total) * 10);
-  return '▮'.repeat(p).padEnd(10, '▯');
+  const length = 10;
+  const p = Math.round((part / total) * length);
+  return '▮'.repeat(p).padEnd(length, '▯');
 };
 
 const logProgress = (
