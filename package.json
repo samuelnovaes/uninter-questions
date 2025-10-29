@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "crawler": "node crawler.js"
+    "crawler": "node scripts/crawler.js",
+    "fix-conflicts": "node scripts/fix-conflicts.js"
   },
   "keywords": [],
   "author": "",
