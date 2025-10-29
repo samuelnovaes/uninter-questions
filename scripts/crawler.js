@@ -1,10 +1,17 @@
 import dotenv from 'dotenv';
 import puppeteer from 'puppeteer';
 import fs from 'fs-extra';
+import { program } from 'commander';
 
 dotenv.config();
 
 const { RU, SENHA } = process.env;
+const login = !!(RU && SENHA);
+
+program.option('-s, --show', 'Show browser window (non-headless mode)');
+program.parse(process.argv);
+const options = program.opts();
+const headless = !options.show && login;
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
@@ -14,7 +21,7 @@ await fs.ensureFile(repositoryPath);
 const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless: false,
+  headless,
   defaultViewport: null,
   protocolTimeout: 0
 });
@@ -65,11 +72,10 @@ async function isRightAnswer(choiceElement, hasRightAnswer) {
   return false;
 }
 
-const parseQuestions = async (btnAnswer, subjectId) => {
+const parseQuestions = async (btnAnswer, subjectId, subjectName) => {
   await click(btnAnswer);
   await waitFor('#conteudoAvaliacao', 'div.show, div.alert-warning');
 
-  const subjectName = await getText(page, '#sidebarCurrentArea span:first-child');
   const questionsElements = await page.$$('div.show');
 
   const subject = repository.find((item) => item.id === subjectId) || {
@@ -131,35 +137,60 @@ const parseQuestions = async (btnAnswer, subjectId) => {
   await waitFor('.btnDetalhes');
 };
 
-const parseExercise = async (detailLink, subjectId) => {
+const parseExercise = async (detailLink, subjectId, subjectName) => {
   await click(detailLink);
   await waitFor('.btnDetalhes');
   for await (const element of iterate('.corpoListaAvaliacaoUsuario')) {
     if (await element.$('.nota')) {
-      await parseQuestions(await element.$('.btnDetalhes'), subjectId);
+      await parseQuestions(await element.$('.btnDetalhes'), subjectId, subjectName);
     }
   }
   await click('#avaliacaoUsuarioListaVoltar');
   await waitFor('#theList', '.detalhesAvaliacaoUsuario');
 };
 
-const parseSubject = async (id) => {
+const logProgress = (
+  subjectIndex,
+  subjectTotal,
+  exerciseIndex,
+  exerciseTotal,
+  subjectName,
+  exerciseName
+) => {
+  log(
+    'Realizando varredura...\n'+
+    `Disciplina: ${subjectIndex}/${subjectTotal} - ${subjectName}\n`+
+    (exerciseTotal ? `Avaliação: ${exerciseIndex}/${exerciseTotal} - ${exerciseName}` : 'Avaliação: ---')
+  );
+};
+
+const parseSubject = async (id, index) => {
   await click(`#disciplina_${id} .link-disciplina`);
   await waitFor('#divMenuLateralSala', '#leftSidebarItemView header');
   await click((await page.$$('#leftSidebarItemView header a'))[1]);
   await waitFor('#theList', '.titulo-avaliacao, .alert-danger');
+  const subjectName = await getText(page, '#sidebarCurrentArea span:first-child');
+  const length = (await page.$$('.detalhesAvaliacaoUsuario')).length;
+  let i = 1;
+  if(length === 0) {
+    logProgress(index, subjects.length, i, length, subjectName);
+  }
   for await (const element of iterate('.detalhesAvaliacaoUsuario')) {
+    const parent = await (await (await element.getProperty('parentNode')).getProperty('parentNode')).getProperty('parentNode');
+    const exerciseName = (await getText(parent, '.text-muted')).replace('<strong>Título: </strong>', '').trim();
+    logProgress(index, subjects.length, i, length, subjectName, exerciseName);
     await parseExercise(element, id);
+    i++;
   }
   await click('a[href="#/ava"]');
   await waitFor('.titulo-status', '.sv-item');
 };
 
-log('Acessando AVA');
+log('Acessando AVA...');
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
 
-if (RU && SENHA) {
+if (login) {
   await page.type('input#ru', RU);
   await page.type('input#senha', SENHA);
   await click('#loginBtn');
@@ -169,7 +200,7 @@ await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
 await waitFor('.link-escola-meus-cursos');
 
-log('Aguardando por modal de pesquisa');
+log('Aguardando por modal de pesquisa...');
 try {
   await page.waitForSelector('#podeResponderDepois', { timeout: 5000 });
 } catch (e) { }
@@ -195,10 +226,9 @@ for (const topic of topics) {
 }
 
 for (const [i, id] of subjects.entries()) {
-  log(`Realizando varredura: ${i + 1}/${subjects.length}`);
-  await parseSubject(id);
+  await parseSubject(id, i + 1);
 }
 
-log('Varredura finalizada');
+log('Varredura finalizada.');
 await fs.writeFile(repositoryPath, JSON.stringify(repository));
 await browser.close();
