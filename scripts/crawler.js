@@ -10,13 +10,13 @@ const { RU, SENHA } = process.env;
 const login = !!(RU && SENHA);
 
 program
-  .option('-h, --headless', 'Run browser in headless mode', true)
+  .option('-s, --show', 'Show browser window (non-headless mode)', false)
   .option('-a, --all', 'Parse all subjects', false);
 
 program.parse(process.argv);
 
 const options = program.opts();
-const headless = options.headless && login;
+const headless = !options.show && login;
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
