@@ -9,10 +9,14 @@ dotenv.config();
 const { RU, SENHA } = process.env;
 const login = !!(RU && SENHA);
 
-program.option('-s, --show', 'Show browser window (non-headless mode)');
+program
+  .option('-h, --headless', 'Run browser in headless mode', true)
+  .option('-a, --all', 'Parse all subjects', false);
+
 program.parse(process.argv);
+
 const options = program.opts();
-const headless = !options.show && login;
+const headless = options.headless && login;
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
@@ -153,7 +157,8 @@ const parseExercise = async (detailLink, subjectId, subjectName) => {
 const progress = (part, total) => {
   const length = 10;
   const p = Math.round((part / total) * length);
-  return '▮'.repeat(p).padEnd(length, '▯');
+  const bar = '█'.repeat(p).padEnd(length, '░');
+  return `${bar} [${part}/${total}]`;
 };
 
 const logProgress = (
@@ -165,8 +170,8 @@ const logProgress = (
   exerciseName
 ) => {
   log(
-    'Realizando varredura...\n\n'+
-    `${progress(subjectIndex, subjectTotal)} ${subjectName}\n`+
+    'Realizando varredura...\n\n' +
+    `${progress(subjectIndex, subjectTotal)} ${subjectName}\n` +
     (exerciseName ? `${chalk.gray(`${progress(exerciseIndex, exerciseTotal)} ${exerciseName}`)}\n` : '\n')
   );
 };
@@ -179,7 +184,7 @@ const parseSubject = async (id, index) => {
   const subjectName = await getText(page, '#sidebarCurrentArea span:first-child');
   const length = (await page.$$('.detalhesAvaliacaoUsuario')).length;
   let i = 1;
-  if(length === 0) {
+  if (length === 0) {
     logProgress(index, subjects.length, i, length, subjectName);
   }
   for await (const element of iterate('.detalhesAvaliacaoUsuario')) {
@@ -227,7 +232,7 @@ const subjects = [];
 for (const topic of topics) {
   const id = await page.evaluate((el) => el.id, topic);
   const done = await topic.$('.icon-thumbs-o-up');
-  if (subjectIdRegExp.test(id) && !done) {
+  if (subjectIdRegExp.test(id) && (!done || options.all)) {
     subjects.push(id.match(subjectIdRegExp)[1]);
   }
 }
