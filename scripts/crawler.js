@@ -6,19 +6,10 @@ import inquirer from 'inquirer';
 
 dotenv.config();
 
-let { RU, SENHA } = process.env;
+const { RU, SENHA } = process.env;
+const login = !!(RU && SENHA);
 
 const answers = await inquirer.prompt([
-  ...(!RU ? [{
-    type: 'input',
-    name: 'RU',
-    message: 'Digite seu RU:'
-  }] : []),
-  ...(!SENHA ? [{
-    type: 'password',
-    name: 'SENHA',
-    message: 'Digite sua senha:'
-  }] : []),
   {
     type: 'confirm',
     name: 'all',
@@ -26,9 +17,6 @@ const answers = await inquirer.prompt([
     default: false
   }
 ]);
-
-RU = RU || answers.RU;
-SENHA = SENHA || answers.SENHA;
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
@@ -38,7 +26,7 @@ await fs.ensureFile(repositoryPath);
 const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless: true,
+  headless: login,
   defaultViewport: null,
   protocolTimeout: 0
 });
@@ -214,9 +202,11 @@ log('Acessando AVA...');
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
 
-await page.type('input#ru', RU);
-await page.type('input#senha', SENHA);
-await click('#loginBtn');
+if (login) {
+  await page.type('input#ru', RU);
+  await page.type('input#senha', SENHA);
+  await click('#loginBtn');
+}
 
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
