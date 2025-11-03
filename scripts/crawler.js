@@ -1,22 +1,40 @@
 import dotenv from 'dotenv';
 import puppeteer from 'puppeteer';
 import fs from 'fs-extra';
-import { program } from 'commander';
 import chalk from 'chalk';
+import inquirer from 'inquirer';
 
 dotenv.config();
 
-const { RU, SENHA } = process.env;
-const login = !!(RU && SENHA);
+let { RU, SENHA } = process.env;
 
-program
-  .option('-s, --show', 'Show browser window (non-headless mode)', false)
-  .option('-a, --all', 'Parse all subjects', false);
+const answers = await inquirer.prompt([
+  ...(!RU ? [{
+    type: 'input',
+    name: 'RU',
+    message: 'Digite seu RU:'
+  }] : []),
+  ...(!SENHA ? [{
+    type: 'password',
+    name: 'SENHA',
+    message: 'Digite sua senha:'
+  }] : []),
+  {
+    type: 'confirm',
+    name: 'all',
+    message: 'Deseja varrer todas as disciplinas, mesmo as já concluídas?',
+    default: false
+  },
+  {
+    type: 'confirm',
+    name: 'headless',
+    message: 'Deseja executar o navegador em modo headless (sem interface gráfica)?',
+    default: true
+  }
+]);
 
-program.parse(process.argv);
-
-const options = program.opts();
-const headless = !options.show && login;
+RU = RU || answers.RU;
+SENHA = SENHA || answers.SENHA;
 
 const homePage = 'https://univirtus.uninter.com/ava/web/#/';
 const repositoryPath = './public/repository.json';
@@ -26,7 +44,7 @@ await fs.ensureFile(repositoryPath);
 const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless,
+  headless: answers.headless,
   defaultViewport: null,
   protocolTimeout: 0
 });
@@ -202,11 +220,9 @@ log('Acessando AVA...');
 await page.goto(homePage, { timeout: 0 });
 await waitFor('input#ru');
 
-if (login) {
-  await page.type('input#ru', RU);
-  await page.type('input#senha', SENHA);
-  await click('#loginBtn');
-}
+await page.type('input#ru', RU);
+await page.type('input#senha', SENHA);
+await click('#loginBtn');
 
 await waitFor('#loginBoxAva');
 await click('#loginBoxAva');
@@ -232,7 +248,7 @@ const subjects = [];
 for (const topic of topics) {
   const id = await page.evaluate((el) => el.id, topic);
   const done = await topic.$('.icon-thumbs-o-up');
-  if (subjectIdRegExp.test(id) && (!done || options.all)) {
+  if (subjectIdRegExp.test(id) && (!done || answers.all)) {
     subjects.push(id.match(subjectIdRegExp)[1]);
   }
 }
