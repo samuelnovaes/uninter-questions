@@ -14,7 +14,7 @@ const answers = await inquirer.prompt([
     type: 'confirm',
     name: 'all',
     message: 'Deseja varrer todas as disciplinas, mesmo as já concluídas?',
-    default: false
+    default: true
   }
 ]);
 
