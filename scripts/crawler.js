@@ -24,12 +24,6 @@ const answers = await inquirer.prompt([
     name: 'all',
     message: 'Deseja varrer todas as disciplinas, mesmo as já concluídas?',
     default: false
-  },
-  {
-    type: 'confirm',
-    name: 'headless',
-    message: 'Deseja executar o navegador em modo headless (sem interface gráfica)?',
-    default: true
   }
 ]);
 
@@ -44,7 +38,7 @@ await fs.ensureFile(repositoryPath);
 const repository = JSON.parse(await fs.readFile(repositoryPath, 'utf-8') || '[]');
 
 const browser = await puppeteer.launch({
-  headless: answers.headless,
+  headless: true,
   defaultViewport: null,
   protocolTimeout: 0
 });
