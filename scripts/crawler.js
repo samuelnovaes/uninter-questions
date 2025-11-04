@@ -215,7 +215,7 @@ await waitFor('.link-escola-meus-cursos');
 log('Aguardando por modal de pesquisa...');
 try {
   await page.waitForSelector('#podeResponderDepois', { timeout: 5000 });
-} catch (e) { }
+} catch { }
 const btnResponderDepois = await page.$('#podeResponderDepois');
 if (btnResponderDepois) {
   await click(btnResponderDepois);
