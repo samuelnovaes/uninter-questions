@@ -4,7 +4,7 @@ const QuestionsContainer = ({ children }) => (
     sx={{
       display: 'grid',
       gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-      gap: 2,
+      gap: 2
     }}
   >
     {children}
