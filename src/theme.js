@@ -6,25 +6,18 @@ export const darkTheme = createTheme({
     background: {
       default: '#0f1c2b'
     },
-    cards: {
-      subjects: {
-        background: '#1c2a3a',
-        color: '#fff'
-      }
-    },
-    buttons: {
-      simulado: {
-        main: '#ffbe18',
-        contrastText: '#1f2c3a'
-      },
-      gabarito: {
-        main: '#1f2c3a',
-        contrastText: '#ffbe18',
-        border: '1px solid #ffbe18'
-      }
+    primary: {
+      main: '#ffbe18'
     }
   },
   components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#1c2a3a'
+        }
+      }
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
@@ -32,7 +25,8 @@ export const darkTheme = createTheme({
           color: '#ffbe18',
           fontWeight: 'bold',
           border: 'none',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
+          borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
+          textTransform: 'uppercase'
         }
       }
     },
@@ -40,6 +34,23 @@ export const darkTheme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: '#14212e'
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontWeight: 'bold'
+        },
+        outlined: {
+          border: '1px solid #ffbe18'
+        }
+      }
+    },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: '#1c2a3a'
         }
       }
     }
@@ -52,22 +63,8 @@ export const lightTheme = createTheme({
     background: {
       default: '#e0e6ee'
     },
-    cards: {
-      subjects: {
-        background: '#fff',
-        color: '#003d7a'
-      }
-    },
-    buttons: {
-      simulado: {
-        main: '#003d7a',
-        contrastText: '#fff'
-      },
-      gabarito: {
-        main: '#fff',
-        contrastText: '#003d7a',
-        border: '1px solid #003d7a'
-      }
+    primary: {
+      main: '#003d7a'
     }
   },
   components: {
@@ -78,7 +75,8 @@ export const lightTheme = createTheme({
           color: '#003d7a',
           fontWeight: 'bold',
           border: 'none',
-          borderBottom: '1px solid rgba(0, 0, 0, 0.12)'
+          borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+          textTransform: 'uppercase'
         }
       }
     },
@@ -86,6 +84,16 @@ export const lightTheme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: '#ffffff'
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontWeight: 'bold'
+        },
+        outlined: {
+          border: '1px solid #003d7a'
         }
       }
     }
