@@ -29,7 +29,7 @@ const Progress = ({ rightAnswers, total }) => {
           variant='determinate'
           size={200}
           value={100}
-          sx={{ color: theme.palette.grey[isDark ? 800 : 100] }}
+          sx={{ color: theme.palette.grey[isDark ? 900 : 100] }}
         />
       </Box>
       <Box sx={progressContainerSX}>
