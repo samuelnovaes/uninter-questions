@@ -15,22 +15,15 @@ import SearchField from '../components/SearchField';
 import QuestionsContainer from '../components/QuestionsContainer';
 import { GlobalContext } from '../GlobalProvider';
 import useSessionStorage from '../hooks/useStorage';
-import { useTheme } from '@mui/material/styles';
 
 const SubjectsPage = () => {
   const { subjects: allSubjects } = useContext(GlobalContext);
   const [subjects, setSubjects] = useState(allSubjects);
   const [searchText, setSearchText] = useSessionStorage('subjectsSearch', '');
-  const theme = useTheme();
-  const simuladoPalette = theme.palette.buttons.simulado;
-  const gabaritoPalette = theme.palette.buttons.gabarito;
-  const cardPalette = theme.palette.cards?.subjects;
 
   const onSearch = (text) => {
     setSearchText(text);
-    setSubjects(
-      allSubjects.filter((subject) => textMatch(subject.subject, text))
-    );
+    setSubjects(allSubjects.filter((subject) => textMatch(subject.subject, text)));
   };
 
   useEffect(() => {
@@ -40,25 +33,16 @@ const SubjectsPage = () => {
   return (
     <>
       <Header
-        title='DISCIPLINAS'
+        title='Disciplinas'
         extend={<SearchField onChange={onSearch} initialValue={searchText} />}
       />
       <Container sx={{ py: 4 }}>
         <QuestionsContainer display='grid'>
           {subjects.map((subject) => (
-            <Card
-              key={subject.id}
-              variant='outlined'
-              sx={{
-                backgroundColor: cardPalette.background,
-                color: cardPalette.color,
-                fontSize: '18px',
-                fontWeight: 'bold',
-                borderRadius: '8px'
-              }}
+            <Card key={subject.id} variant='outlined'
             >
               <CardContent>
-                <p>{subject.subject}</p>
+                <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{subject.subject}</p>
                 <Typography variant='caption' component='p'>
                   {subject.questions.length} questões
                 </Typography>
@@ -66,29 +50,12 @@ const SubjectsPage = () => {
               <Divider />
               <CardActions>
                 <Link to={`/exam/${subject.id}`}>
-                  <Button
-                    variant='contained'
-                    size='small'
-                    sx={{
-                      backgroundColor: simuladoPalette.main,
-                      color: simuladoPalette.contrastText,
-                      fontWeight: 'bold'
-                    }}
-                  >
+                  <Button variant='contained' size='small'>
                     Simulado
                   </Button>
                 </Link>
                 <Link to={`/answers/${subject.id}`}>
-                  <Button
-                    variant='contained'
-                    size='small'
-                    sx={{
-                      backgroundColor: gabaritoPalette.main,
-                      color: gabaritoPalette.contrastText,
-                      border: gabaritoPalette.border,
-                      fontWeight: 'bold'
-                    }}
-                  >
+                  <Button variant='outlined' size='small'>
                     Gabarito
                   </Button>
                 </Link>
