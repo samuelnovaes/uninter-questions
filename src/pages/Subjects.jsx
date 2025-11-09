@@ -7,7 +7,7 @@ import {
   CardContent,
   Container,
   Divider,
-  Typography,
+  Typography
 } from '@mui/material';
 import textMatch from '../utils/textMatch';
 import { Link } from 'react-router-dom';
@@ -54,7 +54,7 @@ const SubjectsPage = () => {
                 color: cardPalette.color,
                 fontSize: '18px',
                 fontWeight: 'bold',
-                borderRadius: '8px',
+                borderRadius: '8px'
               }}
             >
               <CardContent>
@@ -72,7 +72,7 @@ const SubjectsPage = () => {
                     sx={{
                       backgroundColor: simuladoPalette.main,
                       color: simuladoPalette.contrastText,
-                      fontWeight: 'bold',
+                      fontWeight: 'bold'
                     }}
                   >
                     Simulado
@@ -86,7 +86,7 @@ const SubjectsPage = () => {
                       backgroundColor: gabaritoPalette.main,
                       color: gabaritoPalette.contrastText,
                       border: gabaritoPalette.border,
-                      fontWeight: 'bold',
+                      fontWeight: 'bold'
                     }}
                   >
                     Gabarito
