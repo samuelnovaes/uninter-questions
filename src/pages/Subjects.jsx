@@ -44,7 +44,7 @@ const SubjectsPage = () => {
         extend={<SearchField onChange={onSearch} initialValue={searchText} />}
       />
       <Container sx={{ py: 4 }}>
-        <QuestionsContainer>
+        <QuestionsContainer display='grid'>
           {subjects.map((subject) => (
             <Card
               key={subject.id}
