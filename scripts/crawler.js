@@ -191,7 +191,7 @@ const parseSubject = async (id, index) => {
     const parent = await (await (await element.getProperty('parentNode')).getProperty('parentNode')).getProperty('parentNode');
     const exerciseName = (await getText(parent, '.text-muted')).replace('<strong>Título: </strong>', '').trim();
     logProgress(index, subjects.length, i, length, subjectName, exerciseName);
-    await parseExercise(element, id);
+    await parseExercise(element, id, subjectName);
     i++;
   }
   await click('a[href="#/ava"]');
