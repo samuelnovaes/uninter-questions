@@ -17,7 +17,7 @@ String.prototype.preCleanUp = function () {
 };
 
 const cleanSource = (source) => source
-  .preCleanUp()
+  ?.preCleanUp()
   .replace(/<br\\?>/ig, ' ')
   .replace(/<\/?[^>]+(>|$)/g, '')
   .replace(/&amp;/ig, '&')
@@ -32,6 +32,6 @@ const cleanQuery = (text) => text
   .preCleanUp()
   .afterCleanUp();
 
-const textMatch = (source, query) => cleanSource(source).includes(cleanQuery(query));
+const textMatch = (source, query) => cleanSource(source)?.includes(cleanQuery(query));
 
 export default textMatch;
