@@ -6,7 +6,7 @@ const DialogClose = ({ onClick }) => (
     <DialogActions
       sx={{ justifyContent: 'center' }}
     >
-      <Button variant='contained' onClick={onClick}>Fechar</Button>
+      <Button disableElevation variant='contained' onClick={onClick}>Fechar</Button>
     </DialogActions>
   </>
 );

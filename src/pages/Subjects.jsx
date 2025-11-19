@@ -50,12 +50,12 @@ const SubjectsPage = () => {
               <Divider />
               <CardActions>
                 <Link to={`/exam/${subject.id}`}>
-                  <Button variant='contained' size='small'>
+                  <Button variant='contained' size='small' disableElevation>
                     Simulado
                   </Button>
                 </Link>
                 <Link to={`/answers/${subject.id}`}>
-                  <Button variant='outlined' size='small'>
+                  <Button variant='outlined' size='small' disableElevation>
                     Gabarito
                   </Button>
                 </Link>
