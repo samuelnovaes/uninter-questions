@@ -41,9 +41,6 @@ export const darkTheme = createTheme({
       styleOverrides: {
         root: {
           fontWeight: 'bold'
-        },
-        outlined: {
-          border: '1px solid #ffbe18'
         }
       }
     },
@@ -91,9 +88,6 @@ export const lightTheme = createTheme({
       styleOverrides: {
         root: {
           fontWeight: 'bold'
-        },
-        outlined: {
-          border: '1px solid #003d7a'
         }
       }
     }
