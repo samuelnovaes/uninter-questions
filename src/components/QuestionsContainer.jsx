@@ -13,8 +13,14 @@ const layoutConfig = {
   }
 };
 
-const QuestionsContainer = ({ children, display = 'flex' }) => (
-  <Box sx={layoutConfig[display]}>
+const QuestionsContainer = ({ children, display = 'flex', ...props }) => (
+  <Box
+    sx={{
+      ...layoutConfig[display],
+      width: '100%'
+    }}
+    {...props}
+  >
     {children}
   </Box>
 );
