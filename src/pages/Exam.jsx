@@ -7,7 +7,6 @@ import Question from '../components/Question';
 import Progress from '../components/Progress';
 import DialogClose from '../components/DialogClose';
 import { GlobalContext } from '../GlobalProvider';
-import PrintButton from '../components/PrintButton';
 import usePagination from '@mui/material/usePagination';
 import { ChevronLeft, ChevronRight, Refresh } from '@mui/icons-material';
 
@@ -93,12 +92,9 @@ const Exam = () => {
         title={`Simulado - ${subject.subject}`}
         backButton='/'
         extend={
-          <>
-            <IconButton onClick={reset}>
-              <Refresh />
-            </IconButton>
-            <PrintButton />
-          </>
+          <IconButton onClick={reset}>
+            <Refresh />
+          </IconButton>
         }
       />
       <Container sx={{
