@@ -77,7 +77,7 @@ const Exam = () => {
       return 'info';
     }
     if (selected) {
-      return 'primary';
+      return 'white';
     }
     return 'inherit';
   };
@@ -125,7 +125,7 @@ const Exam = () => {
               <Button
                 key={i}
                 {...item}
-                variant={selected ? 'contained' : 'outlined'}
+                variant={selected ? 'contained' : 'text'}
                 color={getColor(question, selected)}
                 sx={{
                   display: 'flex',
