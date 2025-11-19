@@ -8,6 +8,10 @@ export const darkTheme = createTheme({
     },
     primary: {
       main: '#ffbe18'
+    },
+    white: {
+      main: '#ffffff',
+      contrastText: '#000000'
     }
   },
   components: {
@@ -62,6 +66,10 @@ export const lightTheme = createTheme({
     },
     primary: {
       main: '#003d7a'
+    },
+    white: {
+      main: '#ffffff',
+      contrastText: '#000000'
     }
   },
   components: {
