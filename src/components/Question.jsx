@@ -32,7 +32,7 @@ const Question = ({
   };
 
   return (
-    <Card variant='outlined'>
+    <Card variant='outlined' sx={{ width: '100%' }}>
       <CardContent sx={{ ['& img']: { maxWidth: '100%' } }}>
         {question.description.map((text, i) => (
           <Fragment key={i}>
