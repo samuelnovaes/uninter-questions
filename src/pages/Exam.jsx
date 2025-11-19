@@ -2,14 +2,14 @@ import { Activity, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import shuffleArray from '../utils/shuffleArray';
 import Header from '../components/Header';
-import { Box, Button, Container, Dialog, DialogContent, IconButton } from '@mui/material';
+import { Button, ButtonGroup, Container, Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material';
 import Question from '../components/Question';
 import Progress from '../components/Progress';
 import DialogClose from '../components/DialogClose';
 import { GlobalContext } from '../GlobalProvider';
 import PrintButton from '../components/PrintButton';
 import usePagination from '@mui/material/usePagination';
-import { Refresh } from '@mui/icons-material';
+import { ChevronLeft, ChevronRight, Refresh } from '@mui/icons-material';
 
 const Exam = () => {
   const { subjects } = useContext(GlobalContext);
@@ -24,11 +24,13 @@ const Exam = () => {
   const [keyId, setKeyId] = useState(crypto.randomUUID());
   const [index, setIndex] = useState(0);
 
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('md'));
+
   const { items: paginationItems } = usePagination({
     page: index + 1,
     count: questions.length,
     onChange: (_, value) => setIndex(value - 1),
-    siblingCount: questions.length
+    siblingCount: isMobile ? 1 : 10
   });
 
   const handleQuestionChange = (id, value) => {
@@ -66,7 +68,10 @@ const Exam = () => {
     document.title = `Simulado - ${subject.subject}`;
   }, [subject]);
 
-  const getColor = (question, selected) => {
+  const getColor = (question, selected, type) => {
+    if (type !== 'page') {
+      return 'inherit';
+    }
     if (finished) {
       if (rightQuestions.includes(question.id)) {
         return 'success';
@@ -112,39 +117,35 @@ const Exam = () => {
             />
           </Activity>
         ))}
-        <Box
-          display='flex'
-          justifyContent='center'
-          flexWrap='wrap'
-          gap={1}
-        >
+        <ButtonGroup>
           {paginationItems.map(({ page, type, selected, ...item }, i) => {
-            if (type !== 'page') return null;
-            const question = questions[page - 1];
+            if (type.endsWith('ellipsis')) {
+              return <Button key={i} disabled variant='text'>...</Button>;
+            }
+            const question = type === 'page' && questions[page - 1];
             return (
               <Button
                 key={i}
                 {...item}
                 variant={selected ? 'contained' : 'text'}
-                color={getColor(question, selected)}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: 'fit-content'
-                }}
+                color={getColor(question, selected, type)}
+                disableElevation
               >
-                {page}
+                {type === 'page' && page}
+                {type === 'previous' && <ChevronLeft />}
+                {type === 'next' && <ChevronRight />}
               </Button>
             );
           })}
-          <Button
-            onClick={() => finished ? restart() : checkAnswers()}
-            variant='contained'
-            disabled={Object.keys(answers).length < questions.length}
-          >
-            {finished ? 'Refazer' : 'Finalizar'}
-          </Button>
-        </Box>
+        </ButtonGroup>
+        <Button
+          onClick={() => finished ? restart() : checkAnswers()}
+          variant='contained'
+          disabled={Object.keys(answers).length < questions.length}
+          disableElevation
+        >
+          {finished ? 'Refazer' : 'Finalizar'}
+        </Button>
       </Container>
       <Dialog
         open={showProgress}
