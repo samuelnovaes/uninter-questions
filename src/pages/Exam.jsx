@@ -2,13 +2,13 @@ import { Activity, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import shuffleArray from '../utils/shuffleArray';
 import Header from '../components/Header';
-import { Button, ButtonGroup, Container, Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material';
+import { Box, Button, ButtonGroup, Container, Dialog, DialogContent, Typography, useMediaQuery } from '@mui/material';
 import Question from '../components/Question';
 import Progress from '../components/Progress';
 import DialogClose from '../components/DialogClose';
 import { GlobalContext } from '../GlobalProvider';
 import usePagination from '@mui/material/usePagination';
-import { ChevronLeft, ChevronRight, Refresh } from '@mui/icons-material';
+import { Check, ChevronLeft, ChevronRight, Refresh } from '@mui/icons-material';
 
 const Exam = () => {
   const { subjects } = useContext(GlobalContext);
@@ -36,14 +36,6 @@ const Exam = () => {
     setAnswers((items) => ({ ...items, [id]: value }));
   };
 
-  const restart = () => {
-    setRightQuestions([]);
-    setAnswers({});
-    setFinished(false);
-    setKeyId(crypto.randomUUID());
-    setIndex(0);
-  };
-
   const checkAnswers = () => {
     setRightQuestions(
       questions
@@ -67,36 +59,13 @@ const Exam = () => {
     document.title = `Simulado - ${subject.subject}`;
   }, [subject]);
 
-  const getColor = (question, selected, type) => {
-    if (type !== 'page') {
-      return 'inherit';
-    }
-    if (finished) {
-      if (rightQuestions.includes(question.id)) {
-        return 'success';
-      }
-      return 'error';
-    }
-    if (answers[question.id]) {
-      return 'info';
-    }
-    if (selected) {
-      return 'white';
-    }
-    return 'inherit';
-  };
-
   return (
     <>
       <Header
         title={`Simulado - ${subject.subject}`}
         backButton='/'
-        extend={
-          <IconButton onClick={reset}>
-            <Refresh />
-          </IconButton>
-        }
       />
+
       <Container sx={{
         py: 4,
         gap: 4,
@@ -113,36 +82,60 @@ const Exam = () => {
             />
           </Activity>
         ))}
-        <ButtonGroup>
-          {paginationItems.map(({ page, type, selected, ...item }, i) => {
-            if (type.endsWith('ellipsis')) {
-              return <Button key={i} disabled variant='text'>...</Button>;
-            }
-            const question = type === 'page' && questions[page - 1];
-            return (
-              <Button
-                key={i}
-                {...item}
-                variant={selected ? 'contained' : 'text'}
-                color={getColor(question, selected, type)}
-                disableElevation
-              >
-                {type === 'page' && page}
-                {type === 'previous' && <ChevronLeft />}
-                {type === 'next' && <ChevronRight />}
-              </Button>
-            );
-          })}
-        </ButtonGroup>
-        <Button
-          onClick={() => finished ? restart() : checkAnswers()}
-          variant='contained'
-          disabled={Object.keys(answers).length < questions.length}
-          disableElevation
+
+        <Box
+          display='flex'
+          alignItems='flex-start'
+          justifyContent='center'
+          gap={2}
+          flexWrap='wrap'
         >
-          {finished ? 'Refazer' : 'Finalizar'}
-        </Button>
+          <ButtonGroup variant='contained' disableElevation>
+            <Button
+              disabled={index <= 0}
+              onClick={() => setIndex((i) => i - 1)}
+            >
+              <ChevronLeft />
+            </Button>
+            <Button
+              disabled={index >= questions.length - 1}
+              onClick={() => setIndex((i) => i + 1)}
+            >
+              <ChevronRight />
+            </Button>
+            <Button
+              onClick={finished ? reset : checkAnswers}
+              disabled={Object.keys(answers).length < questions.length}
+            >
+              {finished ? <Refresh /> : <Check />}
+            </Button>
+          </ButtonGroup>
+
+          <ButtonGroup variant='contained' disableElevation>
+            {paginationItems.map(({ page, type, selected, ...item }, i) => {
+              if (type.endsWith('ellipsis')) {
+                return <Button key={i} disabled variant='text'>...</Button>;
+              }
+              if (type !== 'page') {
+                return;
+              }
+              const question = questions[page - 1];
+              return (
+                <Box key={i} display='flex' flexDirection='column' alignItems='center'>
+                  <Button
+                    {...item}
+                    disabled={selected}
+                  >
+                    {page}
+                  </Button>
+                  <Typography variant='caption'>{answers[question.id] || <>&nbsp;</>}</Typography>
+                </Box>
+              );
+            })}
+          </ButtonGroup>
+        </Box>
       </Container>
+
       <Dialog
         open={showProgress}
         onClose={() => setShowProgress(false)}
