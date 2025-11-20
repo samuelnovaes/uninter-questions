@@ -16,11 +16,11 @@ const progressContainerSX = {
 const Progress = ({ rightAnswers, total }) => {
   const theme = useTheme();
   const [progress, setProgress] = useState(0);
-  const {isDark} = useContext(GlobalContext);
+  const { isDark } = useContext(GlobalContext);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    if(progress < rightAnswers) {
+    if (progress < rightAnswers) {
       setTimeout(() => {
         setProgress(progress + 1);
       }, 200);
@@ -56,10 +56,10 @@ const Progress = ({ rightAnswers, total }) => {
       </Box>
       <Box sx={progressContainerSX}>
         <Typography
-          variant='h4'
+          variant='h2'
           fontWeight='bold'
         >
-          {progress}/{total}
+          {done ? progress : '🫣'}
         </Typography>
       </Box>
     </Box>
