@@ -106,6 +106,7 @@ const Exam = () => {
             <Button
               onClick={finished ? reset : checkAnswers}
               disabled={Object.keys(answers).length < questions.length}
+              color={finished ? 'primary' : 'success'}
             >
               {finished ? <Refresh /> : <Check />}
             </Button>
