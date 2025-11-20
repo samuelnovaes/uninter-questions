@@ -2,10 +2,9 @@ import { Activity, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import shuffleArray from '../utils/shuffleArray';
 import Header from '../components/Header';
-import { Box, Button, ButtonGroup, Container, Dialog, DialogContent, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, ButtonGroup, Container, Dialog, DialogActions, DialogContent, Typography, useMediaQuery } from '@mui/material';
 import Question from '../components/Question';
 import Progress from '../components/Progress';
-import DialogClose from '../components/DialogClose';
 import { GlobalContext } from '../GlobalProvider';
 import usePagination from '@mui/material/usePagination';
 import { Check, ChevronLeft, ChevronRight, Refresh } from '@mui/icons-material';
@@ -157,14 +156,20 @@ const Exam = () => {
         </Box>
       </Container>
 
-      <Dialog
-        open={showProgress}
-        onClose={() => setShowProgress(false)}
-      >
-        <DialogContent>
-          <Progress rightAnswers={rightQuestions.length} total={questions.length} />
+      <Dialog open={showProgress}>
+        <DialogContent dividers>
+          <Box
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+            height='100%'
+          >
+            <Progress rightAnswers={rightQuestions.length} total={questions.length} />
+          </Box>
         </DialogContent>
-        <DialogClose onClick={() => setShowProgress(false)} />
+        <DialogActions sx={{ justifyContent: 'center' }}>
+          <Button onClick={() => setShowProgress(false)}>Fechar</Button>
+        </DialogActions>
       </Dialog>
     </>
   );
