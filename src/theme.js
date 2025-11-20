@@ -1,4 +1,4 @@
-import { colors, createTheme } from '@mui/material';
+import { createTheme } from '@mui/material';
 
 export const darkTheme = createTheme({
   palette: {
@@ -12,10 +12,6 @@ export const darkTheme = createTheme({
     white: {
       main: '#ffffff',
       contrastText: '#000000'
-    },
-    success: {
-      main: colors.green[500],
-      contrastText: '#ffffff'
     }
   },
   components: {
