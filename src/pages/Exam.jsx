@@ -114,7 +114,16 @@ const Exam = () => {
           <ButtonGroup variant='contained' disableElevation>
             {paginationItems.map(({ page, type, selected, ...item }, i) => {
               if (type.endsWith('ellipsis')) {
-                return <Button key={i} disabled variant='text'>...</Button>;
+                return (
+                  <Button
+                    key={i}
+                    disabled
+                    variant='text'
+                    sx={{ border: 'none !important' }}
+                  >
+                    ...
+                  </Button>
+                );
               }
               if (type !== 'page') {
                 return;
@@ -138,7 +147,7 @@ const Exam = () => {
                         : 'textPrimary'
                     }
                   >
-                    {answers[question.id] || <>&nbsp;</>}
+                    {answers[question.id]}
                   </Typography>
                 </Box>
               );
