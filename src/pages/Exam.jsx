@@ -133,7 +133,7 @@ const Exam = () => {
                 <Box key={i} display='flex' flexDirection='column' alignItems='center'>
                   <Button
                     {...item}
-                    disabled={selected}
+                    color={selected ? 'white' : 'primary'}
                   >
                     {page}
                   </Button>
