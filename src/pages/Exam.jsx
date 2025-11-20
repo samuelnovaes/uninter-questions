@@ -128,7 +128,18 @@ const Exam = () => {
                   >
                     {page}
                   </Button>
-                  <Typography variant='caption'>{answers[question.id] || <>&nbsp;</>}</Typography>
+                  <Typography
+                    variant='caption'
+                    color={
+                      finished
+                        ? rightQuestions.includes(question.id)
+                          ? 'success'
+                          : 'error'
+                        : 'textPrimary'
+                    }
+                  >
+                    {answers[question.id] || <>&nbsp;</>}
+                  </Typography>
                 </Box>
               );
             })}
