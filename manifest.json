@@ -67,7 +67,7 @@
   ],
   "orientation": "portrait",
   "display": "standalone",
-  "dir": "left",
+  "dir": "ltr",
   "lang": "pt-BR",
   "name": "Uninter Questions",
   "short_name": "Uninter Questions",
