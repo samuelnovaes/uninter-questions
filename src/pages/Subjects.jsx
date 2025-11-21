@@ -1,6 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import Header from '../components/Header';
-import { Button, Card, CardActions, CardContent, Container, Divider, Typography } from '@mui/material';
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Container,
+  Divider,
+  Typography
+} from '@mui/material';
 import textMatch from '../utils/textMatch';
 import { Link } from 'react-router-dom';
 import SearchField from '../components/SearchField';
@@ -29,20 +37,27 @@ const SubjectsPage = () => {
         extend={<SearchField onChange={onSearch} initialValue={searchText} />}
       />
       <Container sx={{ py: 4 }}>
-        <QuestionsContainer>
+        <QuestionsContainer display='grid'>
           {subjects.map((subject) => (
-            <Card key={subject.id} variant='outlined'>
+            <Card key={subject.id} variant='outlined'
+            >
               <CardContent>
-                <p>{subject.subject}</p>
-                <Typography variant='caption' component='p'>{subject.questions.length} questões</Typography>
+                <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{subject.subject}</p>
+                <Typography variant='caption' component='p'>
+                  {subject.questions.length} questões
+                </Typography>
               </CardContent>
               <Divider />
               <CardActions>
                 <Link to={`/exam/${subject.id}`}>
-                  <Button variant='contained' size='small'>Simulado</Button>
+                  <Button variant='contained' size='small' disableElevation>
+                    Simulado
+                  </Button>
                 </Link>
                 <Link to={`/answers/${subject.id}`}>
-                  <Button variant='contained' size='small'>Gabarito</Button>
+                  <Button variant='outlined' size='small' disableElevation>
+                    Gabarito
+                  </Button>
                 </Link>
               </CardActions>
             </Card>
@@ -54,4 +69,3 @@ const SubjectsPage = () => {
 };
 
 export default SubjectsPage;
-

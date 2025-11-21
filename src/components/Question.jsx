@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, Divider, FormControlLabel, Radio, RadioGroup, useTheme } from '@mui/material';
+import { Box, Card, CardContent, Divider, FormControlLabel, Radio, RadioGroup, useTheme } from '@mui/material';
 import parse from 'html-react-parser';
 import { Fragment, useState } from 'react';
 
@@ -21,13 +21,6 @@ const Question = ({
 
   const rightValue = question.options.find((option) => option.rightAnswer)?.name;
 
-  const review = () => {
-    setValue(rightValue);
-    if (onChange) {
-      onChange(rightValue);
-    }
-  };
-
   const getOptionColor = (name) => {
     if (name === rightValue && (finished || readOnly)) {
       return theme.palette.success.main;
@@ -39,7 +32,7 @@ const Question = ({
   };
 
   return (
-    <Card variant='outlined'>
+    <Card variant='outlined' sx={{ width: '100%' }}>
       <CardContent sx={{ ['& img']: { maxWidth: '100%' } }}>
         {question.description.map((text, i) => (
           <Fragment key={i}>
@@ -92,16 +85,6 @@ const Question = ({
             />
           ))}
         </RadioGroup>
-        {!readOnly && (
-          <Button
-            variant='outlined'
-            size='small'
-            onClick={review}
-            className='no-print'
-          >
-            Revelar
-          </Button>
-        )}
       </CardContent>
     </Card>
   );
