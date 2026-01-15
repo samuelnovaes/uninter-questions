@@ -157,7 +157,7 @@ const parseExercise = async (detailLink, subjectId, subjectName) => {
 const progress = (part, total) => {
   const length = 10;
   const p = Math.round((part / total) * length);
-  const bar = '█'.repeat(p).padEnd(length, '░');
+  const bar = '|'.repeat(p).padEnd(length, '_');
   return `${bar} [${part}/${total}]`;
 };
 
