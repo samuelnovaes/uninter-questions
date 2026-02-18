@@ -26,14 +26,16 @@ const SubjectsPage = () => {
     setSubjects(allSubjects.filter((subject) => textMatch(subject.subject, text)));
   };
 
+  const title = 'Disciplinas';
+
   useEffect(() => {
-    document.title = 'Disciplinas';
+    document.title = title;
   }, []);
 
   return (
     <>
       <Header
-        title='Disciplinas'
+        title={title}
         extend={<SearchField onChange={onSearch} initialValue={searchText} />}
       />
       <Container sx={{ py: 4 }}>

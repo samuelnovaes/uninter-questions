@@ -54,14 +54,16 @@ const Exam = () => {
     setQuestions(shuffleArray(subject.questions, 10));
   };
 
+  const title = `Simulado - ${subject.subject}`;
+
   useEffect(() => {
-    document.title = `Simulado - ${subject.subject}`;
+    document.title = title;
   }, [subject]);
 
   return (
     <>
       <Header
-        title={`Simulado - ${subject.subject}`}
+        title={title}
         backButton='/'
       />
 

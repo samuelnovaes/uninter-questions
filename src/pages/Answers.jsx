@@ -15,8 +15,10 @@ const Answers = () => {
   const subject = subjects.find((subject) => subject.id === subjectId);
   const [questions, setQuestions] = useState(subject.questions);
 
+  const title = `Gabarito - ${subject.subject}`;
+
   useEffect(() => {
-    document.title = `Gabarito - ${subject.subject}`;
+    document.title = title;
   }, [subject]);
 
   const onSearch = (text) => {
@@ -26,7 +28,7 @@ const Answers = () => {
   return (
     <>
       <Header
-        title={`Gabarito - ${subject.subject}`}
+        title={title}
         backButton='/'
         extend={(
           <>
