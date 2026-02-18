@@ -26,7 +26,7 @@ const SubjectsPage = () => {
     setSubjects(allSubjects.filter((subject) => textMatch(subject.subject, text)));
   };
 
-  const title = 'Disciplinas';
+  const title = `Disciplinas (${subjects.length})`;
 
   useEffect(() => {
     document.title = title;
