@@ -15,7 +15,7 @@ const Answers = () => {
   const subject = subjects.find((subject) => subject.id === subjectId);
   const [questions, setQuestions] = useState(subject.questions);
 
-  const title = `Gabarito - ${subject.subject}`;
+  const title = `Gabarito - ${subject.subject} (${questions.length})`;
 
   useEffect(() => {
     document.title = title;
